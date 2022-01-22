@@ -5,7 +5,7 @@
         <br />
         <div style="text-align: center">
           <b>
-            <b class="mb-0" style="color: #0d5671;"
+            <b class="mb-0" style="color: #0d5671"
               >نرخ های امروز {{ today }}
             </b>
           </b>
@@ -19,9 +19,9 @@
               <b-col cols="7">
                 <b-row>
                   <b-row class="background container mr-2">
-                    <b-col  cols="7" > <b> دلار: </b> </b-col>
+                    <b-col cols="7"> <b> دلار: </b> </b-col>
 
-                    <b-col  cols="5">
+                    <b-col cols="5">
                       <b style="color: black">
                         {{ numberWithCommas(dollar) }}
                       </b>
@@ -36,8 +36,10 @@
                     </b-col>
                   </b-row>
 
-                  <b-row class="background  mr-2">
-                    <b-col cols="7"> <b style="font-size:0.8em"> انس نقره: </b> </b-col>
+                  <b-row class="background mr-2">
+                    <b-col cols="7">
+                      <b style="font-size: 0.8em"> انس نقره: </b>
+                    </b-col>
 
                     <b-col cols="5">
                       <b style="color: black">
@@ -45,7 +47,6 @@
                       </b>
                     </b-col>
                   </b-row>
-
                 </b-row>
               </b-col>
 
@@ -55,47 +56,85 @@
             <b-row dir="rtl">
               <b-col>
                 <b-card-group dir="rtl">
-                  <b-card style="border-radius: 20px;" class="shadow">
-                    <template #header >
-                      <div style="text-align: center;  " >
-                        <b class="mb-0" style="color: #ffffff; text-shadow: 3px 3px 7px black; ">نرخ طلا و سكه</b>
+                  <b-card style="border-radius: 20px" class="shadow">
+                    <template #header>
+                      <div style="text-align: center">
+                        <b
+                          class="mb-0"
+                          style="color: #ffffff; text-shadow: 3px 3px 7px black"
+                          >نرخ طلا و سكه</b
+                        >
                       </div>
                     </template>
 
                     <div>
-                      <b-row>
-                        <b>
-                          <v-icon
-                            class="mb-2"
-                            style="font-size: 15px; color: #f5d438"
-                            >invert_colors</v-icon
-                          >
-
-                          آبشده:</b
-                        >
-                        <p dir="ltr">{{ numberWithCommas(mesghalPrice) }}</p>
-                      </b-row>
-
-                      <b-row class="mr-10">
-                        <div class="d-flex justify-content-start">
-                          <v-btn
-                            color="#7575a3"
-                            @click="showHobabmesghalDetails"
-                            icon
-                            large
-                          >
-                            <v-icon style="font-size: 30px"
-                              >keyboard_arrow_down</v-icon
+                      <b-row align="right">
+                        <b-col class="pl-0" cols="6">
+                          <b>
+                            <v-icon
+                              class="ml-2"
+                              style="font-size: 18px; color: #f5d438"
+                              @click="showChart()"
+                              >show_chart</v-icon
                             >
-                            <b> جزئیات </b>
-                          </v-btn>
-                        </div>
 
-                        <div class="mt-2" v-show="showHobabmesghal">
-                          <b> حباب آبشده :</b>
-                          <p dir="ltr">{{ HobabAbshode }}%</p>
-                        </div>
+                            <v-icon
+                              class="ml-1"
+                              style="font-size: 18px; color: #f5d438"
+                              @click="showChart()"
+                              >info</v-icon
+                            >
+
+                            آبشده
+                          </b>
+                        </b-col>
+
+                        <b-col class="pr-0" cols="3">
+                          ({{ numberWithCommas(mesghalPrice) }}%)
+                        </b-col>
+                        <b-col cols="3">
+                          <b> {{ numberWithCommas(mesghalPrice) }}</b>
+                        </b-col>
                       </b-row>
+
+                      <br />
+                      <br />
+
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                         
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                                            class="mr-1"
+
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                               حباب آبشده 
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            ({{ numberWithCommas(HobabAbshode) }}%)
+                          </b-col>
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(HobabAbshode) }}</b>
+                          </b-col>
+                        </b-row>
+
+                     
+
+
+                      </div>
                     </div>
 
                     <hr />
@@ -362,10 +401,14 @@
 
               <b-col>
                 <b-card-group>
-                  <b-card dir="rtl"  style="border-radius: 20px ;" class="shadow">
+                  <b-card dir="rtl" style="border-radius: 20px" class="shadow">
                     <template #header>
                       <div style="text-align: center" class="head1">
-                        <b class="mb-0" style="color: #ffffff; text-shadow: 3px 3px 7px black;">سکه بورسی</b>
+                        <b
+                          class="mb-0"
+                          style="color: #ffffff; text-shadow: 3px 3px 7px black"
+                          >سکه بورسی</b
+                        >
                       </div>
                     </template>
 
@@ -565,10 +608,14 @@
 
               <b-col>
                 <b-card-group dir="rtl">
-                  <b-card  style="border-radius: 20px ;" class="shadow">
+                  <b-card style="border-radius: 20px" class="shadow">
                     <template #header>
                       <div style="text-align: center">
-                        <b class="mb-0" style="color: #ffffff; text-shadow: 3px 3px 7px black;">صندوق طلا</b>
+                        <b
+                          class="mb-0"
+                          style="color: #ffffff; text-shadow: 3px 3px 7px black"
+                          >صندوق طلا</b
+                        >
                       </div>
                     </template>
 
@@ -773,7 +820,6 @@
                   </b-card>
                 </b-card-group>
               </b-col>
-
             </b-row>
           </b-col>
 
@@ -879,9 +925,10 @@ export default {
   mounted() {},
   methods: {
     //chart
-    resize(width, height) {
-      this.chart.resize(width, height);
+    showChart() {
+      this.$router.push({ path: "/MainChart" });
     },
+
     //nrkhha
     showHobabRefahDetail() {
       this.showHobabRefah = !this.showHobabRefah;
@@ -1036,9 +1083,14 @@ p {
   background-color: #0486a2;
 }
 
-div.card-header{
-border-top-left-radius: 19px !important;
-border-top-right-radius: 19px !important;
+div.card-header {
+  border-top-left-radius: 19px !important;
+  border-top-right-radius: 19px !important;
+}
+.hob{
+  font-size: 0.9em;
+    font-weight: bold;
 
+  
 }
 </style>
