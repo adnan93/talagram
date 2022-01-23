@@ -13,13 +13,34 @@
         <br />
         <b-row>
           <b-col cols="1"> </b-col>
+
           <b-col cols="10">
             <b-row class="mb-4" dir="rtl">
               <b-col cols="4"> </b-col>
               <b-col cols="7">
                 <b-row>
                   <b-row class="background container mr-2">
-                    <b-col cols="7"> <b> دلار: </b> </b-col>
+                    <b-col class="pl-0" cols="7">
+                      <b style="font-size: 0.8em">
+                        <v-icon
+                          title="نمودار"
+                          class="ml-2"
+                          style="font-size: 13px; color: #f5d438"
+                          @click="showChart()"
+                          >show_chart</v-icon
+                        >
+
+                        <v-icon
+                          title="اطلاعات"
+                          class="ml-1"
+                          style="font-size: 13px; color: #f5d438"
+                          @click="showChart()"
+                          >info</v-icon
+                        >
+
+                        دلار
+                      </b>
+                    </b-col>
 
                     <b-col cols="5">
                       <b style="color: black">
@@ -29,19 +50,58 @@
                   </b-row>
 
                   <b-row class="background container mr-2">
-                    <b-col cols="7"> <b> انس طلا: </b> </b-col>
+                    <b-col class="pl-0" cols="8">
+                      <b style="font-size: 0.8em">
+                        <v-icon
+                          title="نمودار"
+                          class="ml-1"
+                          style="font-size: 1.3em; color: #f5d438"
+                          @click="showChart()"
+                          >show_chart</v-icon
+                        >
 
-                    <b-col cols="5">
+                        <v-icon
+                          title="اطلاعات"
+                       
+                          style="font-size: 1em; color: #f5d438"
+                          @click="showChart()"
+                          >info</v-icon
+                        >
+
+                        انس طلا
+                      </b>
+                    </b-col>
+
+                    <b-col cols="4">
                       <b style="color: black"> {{ ons }} $ </b>
                     </b-col>
                   </b-row>
 
                   <b-row class="background mr-2">
-                    <b-col cols="7">
-                      <b style="font-size: 0.8em"> انس نقره: </b>
+                    <b-col class="pl-0" cols="8">
+                      <b style="font-size: 0.75em">
+                        <v-icon
+                          title="نمودار"
+                          class="ml-1"
+                          style="font-size: 1.3em; color: #f5d438"
+                          @click="showChart()"
+                          >show_chart</v-icon
+                        >
+
+                        <v-icon
+                          title="اطلاعات"
+                          
+                       
+                          style="font-size: 1em; color: #f5d438"
+                          @click="showChart()"
+                          >info</v-icon
+                        >
+
+                        انس نقره
+                      </b>
                     </b-col>
 
-                    <b-col cols="5">
+                    <b-col cols="4">
                       <b style="color: black">
                         {{ numberWithCommas(silver) }} $
                       </b>
@@ -54,7 +114,7 @@
             </b-row>
 
             <b-row dir="rtl">
-              <b-col>
+              <b-col class="grid col-xl-4 col-lg-6 col-sm-12 col-12">
                 <b-card-group dir="rtl">
                   <b-card style="border-radius: 20px" class="shadow">
                     <template #header>
@@ -72,6 +132,7 @@
                         <b-col class="pl-0" cols="6">
                           <b>
                             <v-icon
+                              title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
@@ -79,6 +140,7 @@
                             >
 
                             <v-icon
+                              title="اطلاعات"
                               class="ml-1"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
@@ -90,10 +152,110 @@
                         </b-col>
 
                         <b-col class="pr-0" cols="3">
-                          ({{ numberWithCommas(mesghalPrice) }}%)
+                          <div v-if="mesghalPrice > 0">
+                            <b style="color: green">
+                              {{ numberWithCommas(mesghalPrice) }}%</b
+                            >
+                          </div>
+                          <div v-else>
+                            <b style="color: red">
+                              ({{ numberWithCommas(mesghalPrice) }}%)</b
+                            >
+                          </div>
                         </b-col>
                         <b-col cols="3">
-                          <b> {{ numberWithCommas(mesghalPrice) }}</b>
+                          <b> {{ numberWithCommas(mesghalPrice) }} </b>
+                        </b-col>
+                      </b-row>
+                      <br />
+                      <br />
+
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                                title="نمودار"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="mr-1"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              حباب آبشده
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="HobabAbshode > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabAbshode) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabAbshode) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+                          <b-col cols="3">
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabAbshode) }}</b
+                            >
+                          </b-col>
+                        </b-row>
+                      </div>
+                    </div>
+
+                    <hr />
+
+                    <div>
+                      <b-row align="right">
+                        <b-col class="pl-0" cols="6">
+                          <b>
+                            <v-icon
+                              title="نمودار"
+                              class="ml-2"
+                              style="font-size: 18px; color: #f5d438"
+                              @click="showChart()"
+                              >show_chart</v-icon
+                            >
+
+                            <v-icon
+                              title="اطلاعات"
+                              class="ml-1"
+                              style="font-size: 18px; color: #f5d438"
+                              @click="showChart()"
+                              >info</v-icon
+                            >
+
+                            سكه امامی
+                          </b>
+                        </b-col>
+
+                        <b-col class="pr-0" cols="3">
+                          <div v-if="sekePrice > 0">
+                            <b style="color: green">
+                              {{ numberWithCommas(sekePrice) }}%</b
+                            >
+                          </div>
+                          <div v-else>
+                            <b style="color: red">
+                              ({{ numberWithCommas(sekePrice) }}%)</b
+                            >
+                          </div>
+                        </b-col>
+                        <b-col cols="3">
+                          <b>
+                            {{ numberWithCommas(sekePrice) }}
+                          </b>
                         </b-col>
                       </b-row>
 
@@ -105,301 +267,648 @@
                           <b-col class="pl-0" cols="6">
                             <div class="hob">
                               <v-icon
-                         
+                                title="نمودار"
                                 style="font-size: 16px; color: #f5d438"
                                 @click="showChart()"
                                 >show_chart</v-icon
                               >
 
                               <v-icon
-                                                            class="mr-1"
-
+                                title="اطلاعات"
+                                class="mr-1"
                                 style="font-size: 16px; color: #f5d438"
                                 @click="showChart()"
                                 >info</v-icon
                               >
 
-                               حباب آبشده 
+                              حباب سكه امامی
                             </div>
                           </b-col>
 
                           <b-col class="pr-0" cols="3">
-                            ({{ numberWithCommas(HobabAbshode) }}%)
+                            <div v-if="HobabSeke > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabSeke) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabAbshode) }}%)</b
+                              >
+                            </div>
                           </b-col>
                           <b-col cols="3">
-                            <b> {{ numberWithCommas(HobabAbshode) }}</b>
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabSeke) }}</b
+                            >
                           </b-col>
                         </b-row>
-
-                     
-
-
                       </div>
                     </div>
-
-                    <hr />
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >lens</v-icon
-                        >
-
-                        سكه امامی:</b
-                      >
-                      <p dir="ltr">{{ numberWithCommas(sekePrice) }}</p>
-                    </b-row>
-
-                    <b-row class="mr-10">
-                      <div class="d-flex justify-content-start">
-                        <v-btn
-                          color="#7575a3"
-                          @click="showHobabSekeDetails"
-                          icon
-                          large
-                        >
-                          <v-icon style="font-size: 30px"
-                            >keyboard_arrow_down</v-icon
-                          >
-                          <b> جزئیات </b>
-                        </v-btn>
-                      </div>
-
-                      <div class="mt-2" v-show="showHobabSeke">
-                        <b> حباب سكه امامی :</b>
-                        <p dir="ltr">{{ HobabSeke }}%</p>
-                      </div>
-                    </b-row>
-
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >lens</v-icon
-                        >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                        سكه بهار آزادی:</b
-                      >
-                      <p dir="ltr">{{ numberWithCommas(sekeGhadimPrice) }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
 
-                    <b-row class="mr-10">
-                      <div class="d-flex justify-content-start">
-                        <v-btn
-                          color="#7575a3"
-                          @click="showHobabGhadimDetails"
-                          icon
-                          large
-                        >
-                          <v-icon style="font-size: 30px"
-                            >keyboard_arrow_down</v-icon
-                          >
-                          <b> جزئیات </b>
-                        </v-btn>
+                              سكه بهار آزادی
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="sekeGhadimPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(sekeGhadimPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(sekeGhadimPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(sekeGhadimPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                        <br />
                       </div>
 
-                      <div class="mt-2" v-show="showHobabGhadim">
-                        <b-row>
-                          <b> حباب سكه بهار آزادی :</b>
-                          <p dir="ltr">{{ HobabSekeGhadim }}%</p>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                                title="نمودار"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="mr-1"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              حباب سكه بهار آزادی
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="HobabSekeGhadim > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabSekeGhadim) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabSekeGhadim) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+                          <b-col cols="3">
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabSekeGhadim) }}</b
+                            >
+                          </b-col>
                         </b-row>
                       </div>
-                    </b-row>
-
+                    </div>
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >contrast</v-icon
-                        >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                        سکه نیم :</b
-                      >
-                      <p dir="ltr">{{ numberWithCommas(nimPrice) }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
 
-                    <b-row class="mr-10">
-                      <div class="d-flex justify-content-start">
-                        <v-btn
-                          color="#7575a3"
-                          @click="showHobabNimDetails"
-                          icon
-                          large
-                        >
-                          <v-icon style="font-size: 30px"
-                            >keyboard_arrow_down</v-icon
-                          >
-                          <b> جزئیات </b>
-                        </v-btn>
+                              نیم سکه
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="nimPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(nimPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(nimPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(nimPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                        <br />
                       </div>
 
-                      <div class="mt-2" v-show="showHobabNim">
-                        <b-row>
-                          <b> حباب نیم سكه :</b>
-                          <p dir="ltr">{{ HobabNim }}%</p>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                                title="نمودار"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="mr-1"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              حباب نیم سکه
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="HobabNim > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabNim) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabNim) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+                          <b-col cols="3">
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabNim) }}</b
+                            >
+                          </b-col>
                         </b-row>
                       </div>
-                    </b-row>
-
+                    </div>
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >donut_small</v-icon
-                        >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                        سکه ربع :</b
-                      >
-                      <p dir="ltr">{{ numberWithCommas(robPrice) }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
 
-                    <b-row class="mr-10">
-                      <div class="d-flex justify-content-start">
-                        <v-btn
-                          color="#7575a3"
-                          @click="showHobabRobDetails"
-                          icon
-                          large
-                        >
-                          <v-icon style="font-size: 30px"
-                            >keyboard_arrow_down</v-icon
-                          >
-                          <b> جزئیات </b>
-                        </v-btn>
+                              ربع سکه
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="robPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(robPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(robPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(robPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                        <br />
                       </div>
 
-                      <div class="mt-2" v-show="showHobabRob">
-                        <b-row>
-                          <b> حباب ربع سكه :</b>
-                          <p dir="ltr">{{ HobabRob }}%</p>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                                title="نمودار"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="mr-1"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              حباب ربع سکه
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="HobabRob > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabRob) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabRob) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+                          <b-col cols="3">
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabRob) }}</b
+                            >
+                          </b-col>
                         </b-row>
                       </div>
-                    </b-row>
-
+                    </div>
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >lens</v-icon
-                        >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                        سکه گرمی :</b
-                      >
-                      <p dir="ltr">{{ numberWithCommas(sekeGeramiPrice) }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
 
-                    <b-row class="mr-10">
-                      <div class="d-flex justify-content-start">
-                        <v-btn
-                          color="#7575a3"
-                          @click="showHobabGeramiDetails"
-                          icon
-                          large
-                        >
-                          <v-icon style="font-size: 30px"
-                            >keyboard_arrow_down</v-icon
-                          >
-                          <b> جزئیات </b>
-                        </v-btn>
+                              سکه گرمی
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="sekeGeramiPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(sekeGeramiPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(sekeGeramiPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(sekeGeramiPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                        <br />
                       </div>
 
-                      <div class="mt-2" v-show="showHobabGerami">
-                        <b-row>
-                          <b> حباب سكه گرمی :</b>
-                          <p dir="ltr">{{ HobabGerami }}%</p>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <div class="hob">
+                              <v-icon
+                                title="نمودار"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="mr-1"
+                                style="font-size: 16px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              حباب سکه گرمی
+                            </div>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="HobabGerami > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(HobabGerami) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(HobabGerami) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+                          <b-col cols="3">
+                            <b style="color: rgb(99, 51, 51)">
+                              {{ numberWithCommas(HobabGerami) }}</b
+                            >
+                          </b-col>
                         </b-row>
                       </div>
-                    </b-row>
-
+                    </div>
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >18mp</v-icon
-                        >
-                        نرخ طلای 18:</b
-                      >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                      <p dir="ltr">{{ geramTalaPrice }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
 
-                    <hr />
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >24mp</v-icon
-                        >
+                              نرخ طلای 18
+                            </b>
+                          </b-col>
 
-                        نرخ طلای 24:</b
-                      >
-                      <p dir="ltr">{{ gram24TalaPrice }}</p>
-                    </b-row>
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="geramTalaPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(geramTalaPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(geramTalaPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
 
-                    <hr />
-
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >invert_colors</v-icon
-                        >
-                        ارزش طلای آبشده :</b
-                      >
-                      <p dir="ltr">{{ mesghalRiyal }}</p>
-                    </b-row>
-                    <hr />
-
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >lens</v-icon
-                        >
-
-                        ارزش طلای خام سكه تمام :</b
-                      >
-                      <p dir="ltr">{{ sekeRiyal }}</p>
-                    </b-row>
-
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(geramTalaPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                      </div>
+                    </div>
                     <hr />
 
-                    <b-row>
-                      <b>
-                        <v-icon
-                          class="mb-2"
-                          style="font-size: 15px; color: #f5d438"
-                          >crop_7_5</v-icon
-                        >
-                        نرخ انس نقره:</b
-                      >
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
 
-                      <p dir="ltr">{{ silverPrice }}</p>
-                    </b-row>
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              نرخ طلای 24
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="gram24TalaPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(gram24TalaPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(gram24TalaPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(gram24TalaPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                      </div>
+                    </div>
+                    <hr />
+
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              ارزش طلای آبشده
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="mesghalRiyal > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(mesghalRiyal) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(mesghalRiyal) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(mesghalRiyal) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                      </div>
+                    </div>
+                    <hr />
+
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              ارزش طلای خام سكه تمام
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="sekeRiyal > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(sekeRiyal) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(sekeRiyal) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(mesghalRiyal) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                      </div>
+                    </div>
+                    <hr />
+
+                    <div>
+                      <div>
+                        <b-row align="right">
+                          <b-col class="pl-0" cols="6">
+                            <b>
+                              <v-icon
+                                title="نمودار"
+                                class="ml-2"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >show_chart</v-icon
+                              >
+
+                              <v-icon
+                                title="اطلاعات"
+                                class="ml-1"
+                                style="font-size: 18px; color: #f5d438"
+                                @click="showChart()"
+                                >info</v-icon
+                              >
+
+                              نرخ انس نقره
+                            </b>
+                          </b-col>
+
+                          <b-col class="pr-0" cols="3">
+                            <div v-if="silverPrice > 0">
+                              <b style="color: green">
+                                {{ numberWithCommas(silverPrice) }}%</b
+                              >
+                            </div>
+                            <div v-else>
+                              <b style="color: red">
+                                ({{ numberWithCommas(silverPrice) }}%)</b
+                              >
+                            </div>
+                          </b-col>
+
+                          <b-col cols="3">
+                            <b> {{ numberWithCommas(silverPrice) }} </b>
+                          </b-col>
+                        </b-row>
+                        <br />
+                      </div>
+                    </div>
                   </b-card>
                 </b-card-group>
               </b-col>
 
-              <b-col>
+              <b-col class="grid col-xl-4 col-lg-6 col-12">
                 <b-card-group>
                   <b-card dir="rtl" style="border-radius: 20px" class="shadow">
                     <template #header>
@@ -411,194 +920,593 @@
                         >
                       </div>
                     </template>
-
                     <div class="container">
                       <b-card-text>
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <div>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <b style="font-size: 0.8em">
+                                  <v-icon
+                                    title="نمودار"
+                                    class="ml-2"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                            سکه یک روزه بانک رفاه
-                          </b>
-                          <br />
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="ml-1"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p class="mb-0" dir="ltr">
-                            {{ numberWithCommas(sekeRefahPrice) }}
-                          </p>
-                        </b-row>
+                                  سکه یک روزه بانک رفاه
+                                </b>
+                              </b-col>
 
-                        <b-row class="test mr-10">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabRefahDetail"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="sekeRefahPrice > 0">
+                                  <b style="color: green">
+                                    {{ numberWithCommas(sekeRefahPrice) }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{ numberWithCommas(sekeRefahPrice) }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+
+                              <b-col cols="3">
+                                <b> {{ numberWithCommas(sekeRefahPrice) }} </b>
+                              </b-col>
+                            </b-row>
+                            <br />
                           </div>
-                        </b-row>
 
-                        <div class="mt-2 mr-16" v-show="showHobabRefah">
-                          <b> حباب نسبت به بازار آزاد :</b>
-                          <p dir="ltr">{{ HobabRefahCoinFree }}%</p>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                          <b> حباب نسبت به طلای خام سكه :</b>
-                          <p dir="ltr">{{ HobabRefahCoinSekeRiyal }} %</p>
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به بازار آزاد
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabRefahCoinFree > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabRefahCoinFree)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabRefahCoinFree)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabRefahCoinFree) }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
+
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
+
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به طلای خام سكه
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabRefahCoinSekeRiyal > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabRefahCoinSekeRiyal)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabRefahCoinSekeRiyal)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{
+                                    numberWithCommas(HobabRefahCoinSekeRiyal)
+                                  }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
                         </div>
-
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <div>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <b style="font-size: 0.8em">
+                                  <v-icon
+                                    title="نمودار"
+                                    class="ml-2"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                            سکه یک روزه بانک صادرات
-                          </b>
-                          <br />
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="ml-1"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
+                                  سکه یک روزه بانک صادرات
+                                </b>
+                              </b-col>
 
-                          <p dir="ltr">
-                            {{ numberWithCommas(sekeSaderatPrice) }}
-                          </p>
-                        </b-row>
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="sekeSaderatPrice > 0">
+                                  <b style="color: green">
+                                    {{ numberWithCommas(sekeSaderatPrice) }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(sekeSaderatPrice)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
 
-                        <b-row class="test mr-10">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabSaderatDetail"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                              <b-col cols="3">
+                                <b>
+                                  {{ numberWithCommas(sekeSaderatPrice) }}
+                                </b>
+                              </b-col>
+                            </b-row>
+                            <br />
                           </div>
-                        </b-row>
 
-                        <div class="mt-2 mr-16" v-show="showHobabSaderat">
-                          <b-row>
-                            <b> حباب نسبت به بازار آزاد :</b>
-                            <p dir="ltr">{{ HobabSaderatCoinFree }} %</p>
-                          </b-row>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                          <b-row>
-                            <b> حباب نسبت به طلای خام سكه :</b>
-                            <p dir="ltr">{{ HobabSaderatCoinSekeRiyal }} %</p>
-                          </b-row>
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به بازار آزاد
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabRefahCoinFree > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabSaderatCoinFree)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabSaderatCoinFree)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{
+                                    numberWithCommas(HobabSaderatCoinFree)
+                                  }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
+
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
+
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به طلای خام سكه
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabSaderatCoinSekeRiyal > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(
+                                        HobabSaderatCoinSekeRiyal
+                                      )
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(
+                                        HobabSaderatCoinSekeRiyal
+                                      )
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{
+                                    numberWithCommas(HobabSaderatCoinSekeRiyal)
+                                  }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
                         </div>
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <div>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <b style="font-size: 0.8em">
+                                  <v-icon
+                                    title="نمودار"
+                                    class="ml-2"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                            سکه یک روزه بانک ملت
-                          </b>
-                          <br />
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="ml-1"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(sekeMellatPrice) }}
-                          </p>
-                        </b-row>
+                                  سکه یک روزه بانک ملت
+                                </b>
+                              </b-col>
 
-                        <b-row class="test mr-10">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabMelatDetail"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="sekeMellatPrice > 0">
+                                  <b style="color: green">
+                                    {{ numberWithCommas(sekeMellatPrice) }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(sekeMellatPrice)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
 
-                              <b> جزئیات </b>
-                            </v-btn>
+                              <b-col cols="3">
+                                <b> {{ numberWithCommas(sekeMellatPrice) }} </b>
+                              </b-col>
+                            </b-row>
+                            <br />
                           </div>
-                        </b-row>
 
-                        <div class="mt-2 mr-16" v-show="showHobabMelat">
-                          <b-row>
-                            <b> حباب نسبت به بازار آزاد :</b>
-                            <p dir="ltr">{{ HobabMellatCoinFree }} %</p>
-                          </b-row>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                          <b-row>
-                            <b> حباب نسبت به طلای خام سكه :</b>
-                            <p dir="ltr">{{ HobabMellatCoinSekeRiyal }} %</p>
-                          </b-row>
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به بازار آزاد
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabMellatCoinFree > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabMellatCoinFree)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabMellatCoinFree)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabMellatCoinFree) }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
+
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
+
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به طلای خام سكه
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabMellatCoinSekeRiyal > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(
+                                        HobabMellatCoinSekeRiyal
+                                      )
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(
+                                        HobabMellatCoinSekeRiyal
+                                      )
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{
+                                    numberWithCommas(HobabMellatCoinSekeRiyal)
+                                  }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
                         </div>
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <div>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <b style="font-size: 0.8em">
+                                  <v-icon
+                                    title="نمودار"
+                                    class="ml-2"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                            سکه یک روزه بانک سامان
-                          </b>
-                          <br />
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="ml-1"
+                                    style="font-size: 18px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(sekeSamanPrice) }}
-                          </p>
-                        </b-row>
+                                  سکه یک روزه بانک سامان
+                                </b>
+                              </b-col>
 
-                        <b-row class="test mr-10">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabSamanDetail"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="sekeSamanPrice > 0">
+                                  <b style="color: green">
+                                    {{ numberWithCommas(sekeSamanPrice) }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{ numberWithCommas(sekeSamanPrice) }}%)</b
+                                  >
+                                </div>
+                              </b-col>
 
-                              <b> جزئیات </b>
-                            </v-btn>
+                              <b-col cols="3">
+                                <b> {{ numberWithCommas(sekeSamanPrice) }} </b>
+                              </b-col>
+                            </b-row>
+                            <br />
                           </div>
-                        </b-row>
 
-                        <div class="mt-2 mr-16" v-show="showHobabSaman">
-                          <b-row>
-                            <b> حباب نسبت به بازار آزاد :</b>
-                            <p dir="ltr">{{ HobabSamanCoinFree }} %</p>
-                          </b-row>
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
 
-                          <b-row>
-                            <b> حباب نسبت به طلای خام سكه :</b>
-                            <p dir="ltr">{{ HobabSamanCoinSekeRiyal }} %</p>
-                          </b-row>
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به بازار آزاد
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabSamanCoinFree > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabSamanCoinFree)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabSamanCoinFree)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabSamanCoinFree) }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
+
+                          <div>
+                            <b-row align="right">
+                              <b-col class="pl-0" cols="6">
+                                <div class="hob">
+                                  <v-icon
+                                    title="نمودار"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >show_chart</v-icon
+                                  >
+
+                                  <v-icon
+                                    title="اطلاعات"
+                                    class="mr-1"
+                                    style="font-size: 16px; color: #f5d438"
+                                    @click="showChart()"
+                                    >info</v-icon
+                                  >
+
+                                  حباب نسبت به طلای خام سكه
+                                </div>
+                              </b-col>
+
+                              <b-col class="pr-0" cols="3">
+                                <div v-if="HobabSamanCoinSekeRiyal > 0">
+                                  <b style="color: green">
+                                    {{
+                                      numberWithCommas(HobabSamanCoinSekeRiyal)
+                                    }}%</b
+                                  >
+                                </div>
+                                <div v-else>
+                                  <b style="color: red">
+                                    ({{
+                                      numberWithCommas(HobabSamanCoinSekeRiyal)
+                                    }}%)</b
+                                  >
+                                </div>
+                              </b-col>
+                              <b-col cols="3">
+                                <b style="color: rgb(99, 51, 51)">
+                                  {{
+                                    numberWithCommas(HobabSamanCoinSekeRiyal)
+                                  }}</b
+                                >
+                              </b-col>
+                            </b-row>
+                          </div>
                         </div>
                       </b-card-text>
                     </div>
@@ -606,7 +1514,7 @@
                 </b-card-group>
               </b-col>
 
-              <b-col>
+              <b-col class="grid col-xl-4 col-12">
                 <b-card-group dir="rtl">
                   <b-card style="border-radius: 20px" class="shadow">
                     <template #header>
@@ -622,199 +1530,808 @@
                     <div class="container" style="background-color: Light">
                       <b-card-text>
                         <b-row class="test1" dir="rtl">
-                          <b class="mr-0">
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                          <div>
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <b style="font-size: 0.8em">
+                                    <v-icon
+                                      title="نمودار"
+                                      class="ml-2"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
 
-                            صندوق پشتوانه طلای لوتوس (طلا)
-                          </b>
-                          <br />
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="ml-1"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaLotusPriceOpen) }}
-                          </p>
-                        </b-row>
+                                    صندوق پشتوانه طلای لوتس (طلا)
+                                  </b>
+                                </b-col>
 
-                        <b-row class="test mr-8">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabLoutosDetails"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaLotusPriceOpen > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaLotusPriceOpen)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaLotusPriceOpen)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+
+                                <b-col cols="3">
+                                  <b>
+                                    {{ numberWithCommas(talaLotusPriceOpen) }}
+                                  </b>
+                                </b-col>
+                              </b-row>
+                              <br />
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به طلای خام سكه
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaLotusSeke > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaLotusSeke)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaLotusSeke)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(HobabTalaLotusSeke)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به NAV
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaLotusNav > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaLotusNav)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaLotusNav)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaLotusNav) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    مقدار NAV ابطال
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaLotusPricePrevious > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(
+                                          talaLotusPricePrevious
+                                        )
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(
+                                          talaLotusPricePrevious
+                                        )
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(talaLotusPricePrevious)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
                           </div>
                         </b-row>
-
-                        <div class="mt-2 mr-16" v-show="showHobabLoutos">
-                          <b> حباب نسبت به طلای خام سكه :</b>
-                          <p dir="ltr">{{ HobabTalaLotusSeke }}%</p>
-
-                          <b> حباب نسبت به NAV :</b>
-                          <p dir="ltr">{{ HobabTalaLotusNav }}%</p>
-
-                          <b> مقدار NAV ابطال:</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaLotusPricePrevious) }}
-                          </p>
-                        </div>
 
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b class="mr-0">
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <b-row class="test1" dir="rtl">
+                          <div>
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <b style="font-size: 0.8em">
+                                    <v-icon
+                                      title="نمودار"
+                                      class="ml-2"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
 
-                            صندوق پشتوانه طلای مفید (عیار)</b
-                          >
-                          <br />
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="ml-1"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaAyarPriceOpen) }}
-                          </p>
-                        </b-row>
+                                    صندوق پشتوانه طلای مفید (عیار)
+                                  </b>
+                                </b-col>
 
-                        <b-row class="test mr-8">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabEyarDetails"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaAyarPriceOpen > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaAyarPriceOpen)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaAyarPriceOpen)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+
+                                <b-col cols="3">
+                                  <b>
+                                    {{ numberWithCommas(talaAyarPriceOpen) }}
+                                  </b>
+                                </b-col>
+                              </b-row>
+                              <br />
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به طلای خام سكه
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaAyarSeke > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaAyarSeke)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaAyarSeke)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaAyarSeke) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به NAV
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaAyarNav > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaAyarNav)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaAyarNav)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaAyarNav) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    مقدار NAV ابطال
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaAyarPricePrevious > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaAyarPricePrevious)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaAyarPricePrevious)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(talaAyarPricePrevious)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
                           </div>
                         </b-row>
-
-                        <div class="mt-2 mr-16" v-show="showHobabEyar">
-                          <b> حباب نسبت به طلای خام سكه :</b>
-                          <p dir="ltr">{{ HobabTalaAyarSeke }}%</p>
-
-                          <b> حباب نسبت به NAV :</b>
-                          <p dir="ltr">{{ HobabTalaAyarNav }}%</p>
-
-                          <b> مقدار NAV ابطال:</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaAyarPricePrevious) }}
-                          </p>
-                        </div>
-
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <b-row class="test1" dir="rtl">
+                          <div>
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <b style="font-size: 0.8em">
+                                    <v-icon
+                                      title="نمودار"
+                                      class="ml-2"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
 
-                            صندوق پشتوانه طلای زر (زر)</b
-                          >
-                          <br />
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="ml-1"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaZarPriceOpen) }}
-                          </p>
-                        </b-row>
+                                    صندوق پشتوانه طلای زر (زر)
+                                  </b>
+                                </b-col>
 
-                        <b-row class="test mr-8">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabZarDetails"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaZarPriceOpen > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaZarPriceOpen)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaZarPriceOpen)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+
+                                <b-col cols="3">
+                                  <b>
+                                    {{ numberWithCommas(talaZarPriceOpen) }}
+                                  </b>
+                                </b-col>
+                              </b-row>
+                              <br />
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به طلای خام سكه
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaZarSeke > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaZarSeke)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaZarSeke)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaZarSeke) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به NAV
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaZarNav > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaZarNav)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaZarNav)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaZarNav) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    مقدار NAV ابطال
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaZarPricePrevious > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaZarPricePrevious)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaZarPricePrevious)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(talaZarPricePrevious)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
                           </div>
                         </b-row>
-
-                        <div class="mt-2 mr-16" v-show="showHobabZar">
-                          <b> حباب نسبت به طلای خام سكه :</b>
-                          <p dir="ltr">{{ HobabTalaZarSeke }}%</p>
-
-                          <b> حباب نسبت به NAV :</b>
-                          <p dir="ltr">{{ HobabTalaZarNav }}%</p>
-
-                          <b> مقدار NAV ابطال:</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaZarPricePrevious) }}
-                          </p>
-                        </div>
-
                         <hr />
 
-                        <b-row dir="rtl">
-                          <b>
-                            <v-icon
-                              class="mb-2"
-                              style="font-size: 15px; color: #f5d438"
-                              >lens</v-icon
-                            >
+                        <b-row class="test1" dir="rtl">
+                          <div>
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <b style="font-size: 0.8em">
+                                    <v-icon
+                                      title="نمودار"
+                                      class="ml-2"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
 
-                            صندوق پشتوانه طلای کیان (گوهر)</b
-                          >
-                          <br />
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="ml-1"
+                                      style="font-size: 18px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
 
-                          <b class="mr-16"> قیمت پایانی :</b>
+                                    صندوق پشتوانه طلای کیان (گوهر)
+                                  </b>
+                                </b-col>
 
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaGoharPriceOpen) }}
-                          </p>
-                        </b-row>
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaGoharPriceOpen > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(talaGoharPriceOpen)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(talaGoharPriceOpen)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
 
-                        <b-row class="test mr-8">
-                          <div class="test d-flex justify-content-start">
-                            <v-btn
-                              color="#7575a3"
-                              @click="showHobabGoharDetails"
-                              icon
-                              large
-                            >
-                              <v-icon style="font-size: 30px"
-                                >keyboard_arrow_down</v-icon
-                              >
-                              <b> جزئیات </b>
-                            </v-btn>
+                                <b-col cols="3">
+                                  <b>
+                                    {{ numberWithCommas(talaGoharPriceOpen) }}
+                                  </b>
+                                </b-col>
+                              </b-row>
+                              <br />
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به طلای خام سكه
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaGoharSeke > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaGoharSeke)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaGoharSeke)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(HobabTalaGoharSeke)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    حباب نسبت به NAV
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="HobabTalaGoharNav > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(HobabTalaGoharNav)
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(HobabTalaGoharNav)
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{ numberWithCommas(HobabTalaGoharNav) }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
+
+                            <div>
+                              <b-row align="right">
+                                <b-col class="pl-0" cols="6">
+                                  <div class="hob">
+                                    <v-icon
+                                      title="نمودار"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >show_chart</v-icon
+                                    >
+
+                                    <v-icon
+                                      title="اطلاعات"
+                                      class="mr-1"
+                                      style="font-size: 16px; color: #f5d438"
+                                      @click="showChart()"
+                                      >info</v-icon
+                                    >
+
+                                    مقدار NAV ابطال
+                                  </div>
+                                </b-col>
+
+                                <b-col class="pr-0" cols="3">
+                                  <div v-if="talaGoharPricePrevious > 0">
+                                    <b style="color: green">
+                                      {{
+                                        numberWithCommas(
+                                          talaGoharPricePrevious
+                                        )
+                                      }}%</b
+                                    >
+                                  </div>
+                                  <div v-else>
+                                    <b style="color: red">
+                                      ({{
+                                        numberWithCommas(
+                                          talaGoharPricePrevious
+                                        )
+                                      }}%)</b
+                                    >
+                                  </div>
+                                </b-col>
+                                <b-col cols="3">
+                                  <b style="color: rgb(99, 51, 51)">
+                                    {{
+                                      numberWithCommas(talaGoharPricePrevious)
+                                    }}</b
+                                  >
+                                </b-col>
+                              </b-row>
+                            </div>
                           </div>
                         </b-row>
-
-                        <div class="mt-2 mr-16" v-show="showHobabGohar">
-                          <b> حباب نسبت به طلای خام سكه :</b>
-                          <p dir="ltr">{{ HobabTalaGoharSeke }}%</p>
-
-                          <b> حباب نسبت به NAV :</b>
-                          <p dir="ltr">{{ HobabTalaGoharNav }}%</p>
-
-                          <b> مقدار NAV ابطال:</b>
-                          <p dir="ltr">
-                            {{ numberWithCommas(talaGoharPricePrevious) }}
-                          </p>
-                        </div>
                       </b-card-text>
                     </div>
                   </b-card>
@@ -1087,10 +2604,11 @@ div.card-header {
   border-top-left-radius: 19px !important;
   border-top-right-radius: 19px !important;
 }
-.hob{
-  font-size: 0.9em;
-    font-weight: bold;
-
-  
+.hob {
+  font-size: 0.8em;
+  color: rgb(99, 51, 51);
+}
+.grid {
+  margin-bottom: 1em;
 }
 </style>
