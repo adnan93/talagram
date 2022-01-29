@@ -11,18 +11,29 @@
         <b-row class="background container mr-2">
           <b-col class="pl-0" cols="7">
             <b style="font-size: 0.8em">
-              <v-icon
+              <img
+                class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                width="20px"
+                height="20px"
+                src="@/assets/chart.png"
+                alt="طلاگرام"
+                @click="showChart()"
+                title="نمودار"
+                style="cursor: pointer"
+              />
+
+              <!-- <v-icon
                 title="نمودار"
                 class="ml-2"
-                style="font-size: 13px; color: #f5d438"
+                style="font-size: 15px; color: #f5d438"
                 @click="showChart()"
-                >show_chart</v-icon
-              >
+                >insights</v-icon
+              > -->
 
               <v-icon
                 title="اطلاعات"
                 class="ml-1"
-                style="font-size: 13px; color: #f5d438"
+                style="font-size: 18px; color: #f5d438"
                 @click="showChart()"
                 >info</v-icon
               >
@@ -41,17 +52,28 @@
         <b-row class="background container mr-2">
           <b-col class="pl-0" cols="8">
             <b style="font-size: 0.8em">
-              <v-icon
+              <!-- <v-icon
                 title="نمودار"
                 class="ml-1"
                 style="font-size: 1.3em; color: #f5d438"
                 @click="showChart()"
                 >show_chart</v-icon
-              >
+              > -->
+
+              <img
+                class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                width="20px"
+                height="20px"
+                src="@/assets/chart.png"
+                alt="طلاگرام"
+                @click="showChart()"
+                title="نمودار"
+                style="cursor: pointer"
+              />
 
               <v-icon
                 title="اطلاعات"
-                style="font-size: 1em; color: #f5d438"
+                style="font-size: 18px; color: #f5d438"
                 @click="showChart()"
                 >info</v-icon
               >
@@ -68,17 +90,27 @@
         <b-row class="background mr-2">
           <b-col class="pl-0" cols="8">
             <b style="font-size: 0.75em">
-              <v-icon
+              <!-- <v-icon
                 title="نمودار"
                 class="ml-1"
                 style="font-size: 1.3em; color: #f5d438"
                 @click="showChart()"
                 >show_chart</v-icon
-              >
+              > -->
+              <img
+                class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                width="20px"
+                height="20px"
+                src="@/assets/chart.png"
+                alt="طلاگرام"
+                @click="showChart()"
+                title="نمودار"
+                style="cursor: pointer"
+              />
 
               <v-icon
                 title="اطلاعات"
-                style="font-size: 1em; color: #f5d438"
+                style="font-size: 18px; color: #f5d438"
                 @click="showChart()"
                 >info</v-icon
               >
@@ -93,7 +125,6 @@
         </b-row>
       </b-row>
 
-      <br />
       <b-row>
         <b-col cols="1"> </b-col>
 
@@ -120,13 +151,24 @@
                     <b-row align="right">
                       <b-col class="pl-0" cols="6">
                         <b>
-                          <v-icon
+                          <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
                             style="font-size: 18px; color: #f5d438"
                             @click="showChart()"
                             >show_chart</v-icon
-                          >
+                          > -->
+
+                          <img
+                            class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                            width="20px"
+                            height="20px"
+                            src="@/assets/chart.png"
+                            alt="طلاگرام"
+                            @click="showChart()"
+                            title="نمودار"
+                            style="cursor: pointer"
+                          />
 
                           <v-icon
                             title="اطلاعات"
@@ -163,12 +205,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -209,13 +262,24 @@
                     <b-row align="right">
                       <b-col class="pl-0" cols="6">
                         <b>
-                          <v-icon
+                          <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
                             style="font-size: 18px; color: #f5d438"
                             @click="showChart()"
                             >show_chart</v-icon
-                          >
+                          > -->
+
+                          <img
+                            class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                            width="20px"
+                            height="20px"
+                            src="@/assets/chart.png"
+                            alt="طلاگرام"
+                            @click="showChart()"
+                            title="نمودار"
+                            style="cursor: pointer"
+                          />
 
                           <v-icon
                             title="اطلاعات"
@@ -255,12 +319,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -301,13 +376,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -346,12 +432,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -392,13 +489,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -437,12 +545,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -483,13 +602,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -528,12 +658,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -574,13 +715,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -619,12 +771,23 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <div class="hob">
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               style="font-size: 16px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -665,13 +828,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -712,13 +886,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -759,13 +944,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -806,13 +1002,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -853,13 +1060,24 @@
                       <b-row align="right">
                         <b-col class="pl-0" cols="6">
                           <b>
-                            <v-icon
+                            <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
                               style="font-size: 18px; color: #f5d438"
                               @click="showChart()"
                               >show_chart</v-icon
-                            >
+                            > -->
+
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
                             <v-icon
                               title="اطلاعات"
@@ -916,13 +1134,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <b style="font-size: 0.8em">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
                                   style="font-size: 18px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -960,12 +1188,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1005,12 +1244,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1057,13 +1307,24 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <b style="font-size: 0.8em">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
                                   style="font-size: 18px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1103,12 +1364,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1150,12 +1422,22 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1202,13 +1484,24 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <b style="font-size: 0.8em">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
                                   style="font-size: 18px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1246,12 +1539,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1293,12 +1597,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1345,13 +1660,23 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <b style="font-size: 0.8em">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
                                   style="font-size: 18px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1389,12 +1714,22 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1434,12 +1769,22 @@
                           <b-row align="right">
                             <b-col class="pl-0" cols="6">
                               <div class="hob">
-                                <v-icon
+                                <!-- <v-icon
                                   title="نمودار"
                                   style="font-size: 16px; color: #f5d438"
                                   @click="showChart()"
                                   >show_chart</v-icon
-                                >
+                                > -->
+                                <img
+                                  class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                  width="20px"
+                                  height="20px"
+                                  src="@/assets/chart.png"
+                                  alt="طلاگرام"
+                                  @click="showChart()"
+                                  title="نمودار"
+                                  style="cursor: pointer"
+                                />
 
                                 <v-icon
                                   title="اطلاعات"
@@ -1506,13 +1851,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <b style="font-size: 0.8em">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
                                     style="font-size: 18px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1556,12 +1911,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1603,12 +1969,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1650,12 +2027,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1705,13 +2093,24 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <b style="font-size: 0.8em">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
                                     style="font-size: 18px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1755,12 +2154,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1802,12 +2212,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1847,12 +2268,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1901,13 +2333,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <b style="font-size: 0.8em">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
                                     style="font-size: 18px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1949,12 +2391,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -1994,12 +2447,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2039,12 +2503,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2093,13 +2568,24 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <b style="font-size: 0.8em">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
                                     style="font-size: 18px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2143,12 +2629,22 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2190,12 +2686,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2237,12 +2744,23 @@
                             <b-row align="right">
                               <b-col class="pl-0" cols="6">
                                 <div class="hob">
-                                  <v-icon
+                                  <!-- <v-icon
                                     title="نمودار"
                                     style="font-size: 16px; color: #f5d438"
                                     @click="showChart()"
                                     >show_chart</v-icon
-                                  >
+                                  > -->
+
+                                  <img
+                                    class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                                    width="20px"
+                                    height="20px"
+                                    src="@/assets/chart.png"
+                                    alt="طلاگرام"
+                                    @click="showChart()"
+                                    title="نمودار"
+                                    style="cursor: pointer"
+                                  />
 
                                   <v-icon
                                     title="اطلاعات"
@@ -2538,7 +3056,7 @@ p {
 .background {
   margin: 0.5% !important;
   padding: 0.3%;
-  width: 10.5em;
+  width: 11em;
   border-radius: 20px;
   border-style: solid;
   color: #0486a2;
