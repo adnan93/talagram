@@ -3,20 +3,20 @@
     <b-row dir="rtl">
       <b-col cols="2"> </b-col>
       <b-col cols="8">
-        <br />
 
-        <b-row align="center">
+        <b-row class="mt-2" align="center">
           <b-col>
             <div>
               <img
                 src="../assets/meskal.jpg"
-                width="50%"
+                width="250 em"
                 height="50%"
                 style="border-radius: 18px"
               />
             </div>
           </b-col>
         </b-row>
+
 
         <b-row class="mt-2" align="center">
           <b-col>
@@ -26,6 +26,7 @@
             </div>
           </b-col>
         </b-row>
+        
 
         <b-row class="mt-2" align="center">
           <b-col >
@@ -126,26 +127,26 @@
             </div>
           </b-col>
         </b-row>
-        <br>
 
         <div class="mt-2">
           <p
             align="center"
             class="mt-4"
-            style="color: #d9b34a; font-size: 18px"
+            style="color: #d9b34a; font-size: 15px"
           >
             شیراز، خیابان قصرالدشت، چهارراه ملاصدرا، مرکز خرید طلا و جواهر پارس،
             طبقه همکف واحد 29
           </p>
         </div>
 
-        <br />
+  
 
         <br />
       </b-col>
 
       <b-col cols="2"> </b-col>
     </b-row>
+
   </div>
 </template>
 
@@ -232,6 +233,7 @@ export default {
   color: #742b6c;
   padding: 0.3em;
   box-shadow: 3px 5px 10px black;
+
 }
 
 .card2 {
@@ -241,6 +243,7 @@ export default {
   background-color: #742b6c;
   box-shadow: 3px 5px 10px black;
   padding: 0.2em;
+
 }
 
 .card3 {
@@ -250,6 +253,7 @@ export default {
   background-color: #e3e3e0;
   box-shadow: 3px 5px 10px black;
   padding: 0.3em;
+
 }
 .backGround {
   background-color: #ffffff;
