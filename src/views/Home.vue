@@ -50,7 +50,7 @@
         </b-row>
 
         <b-row class="background container mr-2">
-          <b-col class="pl-0" cols="8">
+          <b-col class="pl-0" cols="7">
             <b style="font-size: 0.8em">
               <!-- <v-icon
                 title="نمودار"
@@ -82,7 +82,7 @@
             </b>
           </b-col>
 
-          <b-col cols="4">
+          <b-col cols="5">
             <b style="color: black"> {{ ons }} $ </b>
           </b-col>
         </b-row>
@@ -150,8 +150,9 @@
                   <div>
                     <b-row align="right">
                       <b-col class="pl-0" cols="6">
-                        <b>
-                          <!-- <v-icon
+                        <div class="menueItem">
+                          <b >
+                            <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
                             style="font-size: 18px; color: #f5d438"
@@ -159,27 +160,28 @@
                             >show_chart</v-icon
                           > -->
 
-                          <img
-                            class="img-responsive mt-0 mb-0 pt-0 pb-0"
-                            width="20px"
-                            height="20px"
-                            src="@/assets/chart.png"
-                            alt="طلاگرام"
-                            @click="showChart()"
-                            title="نمودار"
-                            style="cursor: pointer"
-                          />
+                            <img
+                              class="img-responsive mt-0 mb-0 pt-0 pb-0"
+                              width="20px"
+                              height="20px"
+                              src="@/assets/chart.png"
+                              alt="طلاگرام"
+                              @click="showChart()"
+                              title="نمودار"
+                              style="cursor: pointer"
+                            />
 
-                          <v-icon
-                            title="اطلاعات"
-                            class="ml-1"
-                            style="font-size: 18px; color: #f5d438"
-                            @click="showChart()"
-                            >info</v-icon
-                          >
+                            <v-icon
+                              title="اطلاعات"
+                              class="ml-1"
+                              style="font-size: 18px; color: #f5d438"
+                              @click="showChart()"
+                              >info</v-icon
+                            >
 
-                          آبشده
-                        </b>
+                            آبشده
+                          </b>
+                        </div>
                       </b-col>
 
                       <b-col class="pr-0" cols="3">
@@ -2907,11 +2909,13 @@ export default {
     };
   },
   components: {},
-  mounted() {},
+
   methods: {
-    //chart
     showChart() {
-      this.$router.push({ path: "/MainChart" });
+      // this.$router.push({ path: "/MainChart" });
+
+      let routeData = this.$router.resolve({ path: "/MainChart" });
+      window.open(routeData.href, "_blank");
     },
 
     //nrkhha
@@ -2961,7 +2965,7 @@ export default {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     },
   },
-  async created() {
+  async mounted() {
     //date
     this.today = new Date().toLocaleDateString("fa-IR");
     await axios
@@ -3034,11 +3038,7 @@ export default {
 </script>
 
 <style scope>
-.chart {
-  position: absolute;
-  width: 100%;
-  height: 300px;
-}
+
 .test {
   text-align: right !important;
   margin: 0 px;
@@ -3055,8 +3055,7 @@ p {
 }
 .background {
   margin: 0.5% !important;
-  padding: 0.3%;
-  width: 11em;
+  width: 15em;
   border-radius: 20px;
   border-style: solid;
   color: #0486a2;
@@ -3079,4 +3078,9 @@ div.card-header {
 .grid {
   margin-bottom: 1em;
 }
+/* 
+.menueItem :hover {
+ color: #f5d438 !important; 
+  transition: 0.90s;
+} */
 </style>

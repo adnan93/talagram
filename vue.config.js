@@ -1,6 +1,6 @@
 module.exports = {
   devServer:{
-    proxy: 'http://95.217.131.10/'
+    proxy: 'http://95.217.131.10:8080/'
 
   },
   transpileDependencies: [

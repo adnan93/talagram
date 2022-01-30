@@ -1,6 +1,7 @@
 <template>
-  <v-app style="font-family: IRYekan; background-color: #efede9">
-    <b-row dir="rtl">
+  <v-app style="font-family: IRYekan; background-color: #efede9" >
+    <b-row v-if="$route.name!='Prices'" dir="rtl">
+
       <b-navbar toggleable="lg" style="background-color: #0d5671">
         <div>
           <!-- Just an image -->
@@ -34,20 +35,27 @@
               </h6>
             </b-nav-item>
 
-            <b-nav-item class="ml-2">
-              <router-link to="/about"
-                ><h6>
-                  <b style="color: #efede9"> محاسبه قیمت حباب </b>
-                </h6></router-link
-              >
-            </b-nav-item>
+            <div >
+              <b-nav-item class="ml-2">
+                <router-link to="/about"
 
-            <!-- <b-nav-item class="ml-2" href="/ShowPrice">
-              <h6><b style="color: #efede9"> قیمت انلاین </b></h6>
-            </b-nav-item> -->
+                  ><h6 class="menueItem">
+                    <b style="color: #efede9"> محاسبه قیمت حباب </b>
+                  </h6></router-link
+                >
+              </b-nav-item>
+            </div>
 
             <b-nav-item class="ml-2" href="/MainChart">
-              <h6><b style="color: #efede9"> نمودار </b></h6>
+              <h6  class="menueItem"><b  style="color: #efede9"> نمودار </b></h6>
+            </b-nav-item>
+
+            <b-nav-item class="ml-2" href="/Connect">
+              <h6  class="menueItem"><b   style="color: #efede9"> ارتباط با ما </b></h6>
+            </b-nav-item>
+
+            <b-nav-item class="ml-2" href="/ShowPrice">
+              <h6  class="menueItem"><b style="color: #efede9"> سوالات متداول </b></h6>
             </b-nav-item>
 
             <!-- <b-nav-item class="ml-2" href="ShowPrice2">
@@ -71,9 +79,10 @@
         </b-collapse>
       </b-navbar>
     </b-row>
+
     <router-view />
 
-    <b-row class="footer" align="center" dir="rtl">
+    <b-row v-if="$route.name!='Prices'" class="footer" align="center" dir="rtl">
       <hr />
 
       <b-col>
@@ -241,6 +250,14 @@ a {
 
 .place1 :hover {
   color: #ffffff;
-	-webkit-transform: translate(-10%, -10%);
+  -webkit-transform: translate(-10%, -10%);
+}
+
+.menueItem :hover {
+ // background-color: brown;
+
+  color: #f5d438 !important;
+  transition: 0.5s;
+  // opacity: 0.6;
 }
 </style>

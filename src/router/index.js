@@ -15,27 +15,32 @@ const routes = [
     name: 'About',
     component: () => import('../views/About.vue')
   },
+
+  
+
   {
-    path: '/ShowPrice',
-    name: 'ShowPrice',
-    component: () => import('../views/ShowPrice.vue')
+    path: '/Prices',
+    name: 'Prices',
+    component: () => import('../views/Prices.vue')
   },
+
+  
+
+  
+
+  {
+    path: '/Connect',
+    name: 'Connect',
+    component: () => import('../views/Connect.vue')
+  },
+
+
   {
     path: '/MainChart',
     name: 'MainChart',
     component: () => import('../views/MainChart.vue')
   },
-  {
-    path: '/ShowPrice2',
-    name: 'ShowPrice2',
-    component: () => import('../views/ShowPrice2.vue')
-  },
-  {
-    path: '/ShowPrice3',
-    name: 'ShowPrice3',
-    component: () => import('../views/ShowPrice3.vue')
-  },
-  
+ 
 ]
 
 const router = new VueRouter({

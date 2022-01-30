@@ -4,8 +4,6 @@
     <b-row>
       <div class="ch"><TVChartContainer /></div>
     </b-row>
-
-    
     
   </div>
 </template>
