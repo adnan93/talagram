@@ -292,7 +292,9 @@ export default {
       this.hobabLoading = true;
       await axios
 
-        .post(this.url3, this.form)
+      .post(`http://localhost:8080/api/v1/Tools/GetHobab`, this.form)
+
+       // .post(this.url3, this.form)
         .then((response) => {
           this.Hobab1 = response.data.Data.Hobab1;
           this.Hobab2 = response.data.Data.Hobab2;
@@ -355,6 +357,8 @@ export default {
 .btns1{
   margin: 3%;
 }
+
+
 
 
 </style>

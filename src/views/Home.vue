@@ -8,8 +8,8 @@
       <br />
 
       <b-row class="d-flex justify-content-center" dir="rtl">
-        <b-row class="background container mr-2">
-          <b-col class="pl-0" cols="7">
+        <b-row class="background  mr-2">
+          <b-col class="pl-0" cols="6">
             <b style="font-size: 0.8em">
               <img
                 class="img-responsive mt-0 mb-0 pt-0 pb-0"
@@ -25,7 +25,7 @@
               <!-- <v-icon
                 title="نمودار"
                 class="ml-2"
-                style="font-size: 15px; color: #f5d438"
+                style="font-size: 15px; color: #d9b34a"
                 @click="showChart()"
                 >insights</v-icon
               > -->
@@ -33,16 +33,15 @@
               <v-icon
                 title="اطلاعات"
                 class="ml-1"
-                style="font-size: 18px; color: #f5d438"
+                style="font-size: 18px; color: #d9b34a"
                 @click="showChart()"
                 >info</v-icon
               >
-
               دلار
             </b>
           </b-col>
 
-          <b-col cols="5">
+          <b-col cols="6">
             <b style="color: black">
               {{ numberWithCommas(dollar) }}
             </b>
@@ -50,12 +49,12 @@
         </b-row>
 
         <b-row class="background container mr-2">
-          <b-col class="pl-0" cols="7">
+          <b-col class="pl-0" cols="6">
             <b style="font-size: 0.8em">
               <!-- <v-icon
                 title="نمودار"
                 class="ml-1"
-                style="font-size: 1.3em; color: #f5d438"
+                style="font-size: 1.3em; color: #d9b34a"
                 @click="showChart()"
                 >show_chart</v-icon
               > -->
@@ -73,7 +72,7 @@
 
               <v-icon
                 title="اطلاعات"
-                style="font-size: 18px; color: #f5d438"
+                style="font-size: 18px; color: #d9b34a"
                 @click="showChart()"
                 >info</v-icon
               >
@@ -82,18 +81,18 @@
             </b>
           </b-col>
 
-          <b-col cols="5">
+          <b-col cols="6">
             <b style="color: black"> {{ ons }} $ </b>
           </b-col>
         </b-row>
 
         <b-row class="background mr-2">
-          <b-col class="pl-0" cols="8">
+          <b-col class="pl-0" cols="7">
             <b style="font-size: 0.75em">
               <!-- <v-icon
                 title="نمودار"
                 class="ml-1"
-                style="font-size: 1.3em; color: #f5d438"
+                style="font-size: 1.3em; color: #d9b34a"
                 @click="showChart()"
                 >show_chart</v-icon
               > -->
@@ -110,7 +109,7 @@
 
               <v-icon
                 title="اطلاعات"
-                style="font-size: 18px; color: #f5d438"
+                style="font-size: 18px; color: #d9b34a"
                 @click="showChart()"
                 >info</v-icon
               >
@@ -119,7 +118,7 @@
             </b>
           </b-col>
 
-          <b-col cols="4">
+          <b-col cols="5">
             <b style="color: black"> {{ numberWithCommas(silver) }} $ </b>
           </b-col>
         </b-row>
@@ -155,7 +154,7 @@
                             <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
-                            style="font-size: 18px; color: #f5d438"
+                            style="font-size: 18px; color: #d9b34a"
                             @click="showChart()"
                             >show_chart</v-icon
                           > -->
@@ -174,7 +173,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -186,13 +185,13 @@
 
                       <b-col class="pr-0" cols="3">
                         <div v-if="mesghalPrice > 0">
-                          <b style="color: green">
-                            {{ numberWithCommas(mesghalPrice) }}%</b
+                          <p style="color: green">
+                            {{ numberWithCommas(mesghalPrice) }}%</p
                           >
                         </div>
                         <div v-else>
-                          <b style="color: red">
-                            ({{ numberWithCommas(mesghalPrice) }}%)</b
+                          <p style="color: red">
+                            ({{ numberWithCommas(mesghalPrice) }}%)</p
                           >
                         </div>
                       </b-col>
@@ -209,7 +208,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -228,7 +227,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -239,19 +238,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabAbshode > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabAbshode) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabAbshode) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabAbshode) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabAbshode) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabAbshode) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabAbshode) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -267,7 +266,7 @@
                           <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
-                            style="font-size: 18px; color: #f5d438"
+                            style="font-size: 18px; color: #d9b34a"
                             @click="showChart()"
                             >show_chart</v-icon
                           > -->
@@ -286,7 +285,7 @@
                           <v-icon
                             title="اطلاعات"
                             class="ml-1"
-                            style="font-size: 18px; color: #f5d438"
+                            style="font-size: 18px; color: #d9b34a"
                             @click="showChart()"
                             >info</v-icon
                           >
@@ -297,13 +296,13 @@
 
                       <b-col class="pr-0" cols="3">
                         <div v-if="sekePrice > 0">
-                          <b style="color: green">
-                            {{ numberWithCommas(sekePrice) }}%</b
+                          <p style="color: green">
+                            {{ numberWithCommas(sekePrice) }}%</p
                           >
                         </div>
                         <div v-else>
-                          <b style="color: red">
-                            ({{ numberWithCommas(sekePrice) }}%)</b
+                          <p style="color: red">
+                            ({{ numberWithCommas(sekePrice) }}%)</p
                           >
                         </div>
                       </b-col>
@@ -323,7 +322,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -342,7 +341,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -353,19 +352,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabSeke > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabSeke) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabSeke) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabAbshode) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabAbshode) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabSeke) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabSeke) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -381,7 +380,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -400,7 +399,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -411,13 +410,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeGhadimPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(sekeGhadimPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(sekeGhadimPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(sekeGhadimPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(sekeGhadimPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -436,7 +435,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -455,7 +454,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -466,19 +465,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabSekeGhadim > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabSekeGhadim) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabSekeGhadim) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabSekeGhadim) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabSekeGhadim) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabSekeGhadim) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabSekeGhadim) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -494,7 +493,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -513,7 +512,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -524,13 +523,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="nimPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(nimPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(nimPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(nimPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(nimPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -549,7 +548,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -568,7 +567,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -579,19 +578,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabNim > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabNim) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabNim) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabNim) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabNim) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabNim) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabNim) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -607,7 +606,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -626,7 +625,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -637,13 +636,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="robPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(robPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(robPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(robPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(robPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -662,7 +661,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -681,7 +680,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -692,19 +691,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabRob > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabRob) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabRob) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabRob) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabRob) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabRob) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabRob) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -720,7 +719,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -739,7 +738,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -750,13 +749,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeGeramiPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(sekeGeramiPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(sekeGeramiPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(sekeGeramiPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(sekeGeramiPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -775,7 +774,7 @@
                           <div class="hob">
                             <!-- <v-icon
                               title="نمودار"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -794,7 +793,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="mr-1"
-                              style="font-size: 16px; color: #f5d438"
+                              style="font-size: 16px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -805,19 +804,19 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabGerami > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(HobabGerami) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(HobabGerami) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(HobabGerami) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(HobabGerami) }}%)</p
                             >
                           </div>
                         </b-col>
                         <b-col cols="3">
-                          <b style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabGerami) }}</b
+                          <p style="color: rgb(99, 51, 51)">
+                            {{ numberWithCommas(HobabGerami) }}</p
                           >
                         </b-col>
                       </b-row>
@@ -833,7 +832,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -852,7 +851,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -863,13 +862,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="geramTalaPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(geramTalaPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(geramTalaPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(geramTalaPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(geramTalaPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -891,7 +890,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -910,7 +909,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -921,13 +920,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="gram24TalaPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(gram24TalaPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(gram24TalaPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(gram24TalaPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(gram24TalaPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -949,7 +948,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -968,7 +967,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -979,13 +978,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="mesghalRiyal > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(mesghalRiyal) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(mesghalRiyal) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(mesghalRiyal) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(mesghalRiyal) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -1007,7 +1006,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -1026,7 +1025,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -1037,13 +1036,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeRiyal > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(sekeRiyal) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(sekeRiyal) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(sekeRiyal) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(sekeRiyal) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -1065,7 +1064,7 @@
                             <!-- <v-icon
                               title="نمودار"
                               class="ml-2"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >show_chart</v-icon
                             > -->
@@ -1084,7 +1083,7 @@
                             <v-icon
                               title="اطلاعات"
                               class="ml-1"
-                              style="font-size: 18px; color: #f5d438"
+                              style="font-size: 18px; color: #d9b34a"
                               @click="showChart()"
                               >info</v-icon
                             >
@@ -1095,13 +1094,13 @@
 
                         <b-col class="pr-0" cols="3">
                           <div v-if="silverPrice > 0">
-                            <b style="color: green">
-                              {{ numberWithCommas(silverPrice) }}%</b
+                            <p style="color: green">
+                              {{ numberWithCommas(silverPrice) }}%</p
                             >
                           </div>
                           <div v-else>
-                            <b style="color: red">
-                              ({{ numberWithCommas(silverPrice) }}%)</b
+                            <p style="color: red">
+                              ({{ numberWithCommas(silverPrice) }}%)</p
                             >
                           </div>
                         </b-col>
@@ -1139,7 +1138,7 @@
                                 <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1157,7 +1156,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="ml-1"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1168,13 +1167,13 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeRefahPrice > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(sekeRefahPrice) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(sekeRefahPrice) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
-                                  ({{ numberWithCommas(sekeRefahPrice) }}%)</b
+                                <p style="color: red">
+                                  ({{ numberWithCommas(sekeRefahPrice) }}%)</p
                                 >
                               </div>
                             </b-col>
@@ -1192,7 +1191,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1211,7 +1210,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1222,21 +1221,21 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabRefahCoinFree > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(HobabRefahCoinFree) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(HobabRefahCoinFree) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabRefahCoinFree)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabRefahCoinFree) }}</b
+                              <p style="color: rgb(99, 51, 51)">
+                                {{ numberWithCommas(HobabRefahCoinFree) }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1248,7 +1247,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1267,7 +1266,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1278,25 +1277,25 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabRefahCoinSekeRiyal > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabRefahCoinSekeRiyal)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabRefahCoinSekeRiyal)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
+                              <p style="color: rgb(99, 51, 51)">
                                 {{
                                   numberWithCommas(HobabRefahCoinSekeRiyal)
-                                }}</b
+                                }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1312,7 +1311,7 @@
                                 <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1331,7 +1330,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="ml-1"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1342,13 +1341,13 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeSaderatPrice > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(sekeSaderatPrice) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(sekeSaderatPrice) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
-                                  ({{ numberWithCommas(sekeSaderatPrice) }}%)</b
+                                <p style="color: red">
+                                  ({{ numberWithCommas(sekeSaderatPrice) }}%)</p
                                 >
                               </div>
                             </b-col>
@@ -1368,7 +1367,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1387,7 +1386,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1398,23 +1397,23 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabRefahCoinFree > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabSaderatCoinFree)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSaderatCoinFree)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabSaderatCoinFree) }}</b
+                              <p style="color: rgb(99, 51, 51)">
+                                {{ numberWithCommas(HobabSaderatCoinFree) }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1426,7 +1425,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1444,7 +1443,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1455,25 +1454,25 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabSaderatCoinSekeRiyal > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
+                              <p style="color: rgb(99, 51, 51)">
                                 {{
                                   numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                }}</b
+                                }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1489,7 +1488,7 @@
                                 <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1508,7 +1507,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="ml-1"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1519,13 +1518,13 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeMellatPrice > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(sekeMellatPrice) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(sekeMellatPrice) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
-                                  ({{ numberWithCommas(sekeMellatPrice) }}%)</b
+                                <p style="color: red">
+                                  ({{ numberWithCommas(sekeMellatPrice) }}%)</p
                                 >
                               </div>
                             </b-col>
@@ -1543,7 +1542,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1562,7 +1561,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1573,23 +1572,23 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabMellatCoinFree > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabMellatCoinFree)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabMellatCoinFree)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabMellatCoinFree) }}</b
+                              <p style="color: rgb(99, 51, 51)">
+                                {{ numberWithCommas(HobabMellatCoinFree) }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1601,7 +1600,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1620,7 +1619,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1631,25 +1630,25 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabMellatCoinSekeRiyal > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabMellatCoinSekeRiyal)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabMellatCoinSekeRiyal)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
+                              <p style="color: rgb(99, 51, 51)">
                                 {{
                                   numberWithCommas(HobabMellatCoinSekeRiyal)
-                                }}</b
+                                }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1665,7 +1664,7 @@
                                 <!-- <v-icon
                                   title="نمودار"
                                   class="ml-2"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1683,7 +1682,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="ml-1"
-                                  style="font-size: 18px; color: #f5d438"
+                                  style="font-size: 18px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1694,13 +1693,13 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeSamanPrice > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(sekeSamanPrice) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(sekeSamanPrice) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
-                                  ({{ numberWithCommas(sekeSamanPrice) }}%)</b
+                                <p style="color: red">
+                                  ({{ numberWithCommas(sekeSamanPrice) }}%)</p
                                 >
                               </div>
                             </b-col>
@@ -1718,7 +1717,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1736,7 +1735,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1747,21 +1746,21 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabSamanCoinFree > 0">
-                                <b style="color: green">
-                                  {{ numberWithCommas(HobabSamanCoinFree) }}%</b
+                                <p style="color: green">
+                                  {{ numberWithCommas(HobabSamanCoinFree) }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSamanCoinFree)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabSamanCoinFree) }}</b
+                              <p style="color: rgb(99, 51, 51)">
+                                {{ numberWithCommas(HobabSamanCoinFree) }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1773,7 +1772,7 @@
                               <div class="hob">
                                 <!-- <v-icon
                                   title="نمودار"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >show_chart</v-icon
                                 > -->
@@ -1791,7 +1790,7 @@
                                 <v-icon
                                   title="اطلاعات"
                                   class="mr-1"
-                                  style="font-size: 16px; color: #f5d438"
+                                  style="font-size: 16px; color: #d9b34a"
                                   @click="showChart()"
                                   >info</v-icon
                                 >
@@ -1802,25 +1801,25 @@
 
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabSamanCoinSekeRiyal > 0">
-                                <b style="color: green">
+                                <p style="color: green">
                                   {{
                                     numberWithCommas(HobabSamanCoinSekeRiyal)
-                                  }}%</b
+                                  }}%</p
                                 >
                               </div>
                               <div v-else>
-                                <b style="color: red">
+                                <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSamanCoinSekeRiyal)
-                                  }}%)</b
+                                  }}%)</p
                                 >
                               </div>
                             </b-col>
                             <b-col cols="3">
-                              <b style="color: rgb(99, 51, 51)">
+                              <p style="color: rgb(99, 51, 51)">
                                 {{
                                   numberWithCommas(HobabSamanCoinSekeRiyal)
-                                }}</b
+                                }}</p
                               >
                             </b-col>
                           </b-row>
@@ -1856,7 +1855,7 @@
                                   <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -1874,7 +1873,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="ml-1"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -1915,7 +1914,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -1934,7 +1933,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -1945,23 +1944,23 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaLotusSeke > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(HobabTalaLotusSeke)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaLotusSeke)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaLotusSeke) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaLotusSeke) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -1973,7 +1972,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -1992,7 +1991,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2003,23 +2002,23 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaLotusNav > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(HobabTalaLotusNav)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaLotusNav)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaLotusNav) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaLotusNav) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2031,7 +2030,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2050,7 +2049,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2061,25 +2060,25 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaLotusPricePrevious > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaLotusPricePrevious)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaLotusPricePrevious)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
+                                <p style="color: rgb(99, 51, 51)">
                                   {{
                                     numberWithCommas(talaLotusPricePrevious)
-                                  }}</b
+                                  }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2098,7 +2097,7 @@
                                   <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2117,7 +2116,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="ml-1"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2158,7 +2157,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2177,7 +2176,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2188,23 +2187,23 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaAyarSeke > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(HobabTalaAyarSeke)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaAyarSeke)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaAyarSeke) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaAyarSeke) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2216,7 +2215,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2235,7 +2234,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2246,21 +2245,21 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaAyarNav > 0">
-                                  <b style="color: green">
-                                    {{ numberWithCommas(HobabTalaAyarNav) }}%</b
+                                  <p style="color: green">
+                                    {{ numberWithCommas(HobabTalaAyarNav) }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaAyarNav)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaAyarNav) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaAyarNav) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2272,7 +2271,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2291,7 +2290,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2302,25 +2301,25 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaAyarPricePrevious > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaAyarPricePrevious)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaAyarPricePrevious)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
+                                <p style="color: rgb(99, 51, 51)">
                                   {{
                                     numberWithCommas(talaAyarPricePrevious)
-                                  }}</b
+                                  }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2338,7 +2337,7 @@
                                   <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2356,7 +2355,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="ml-1"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2395,7 +2394,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2414,7 +2413,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2425,21 +2424,21 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaZarSeke > 0">
-                                  <b style="color: green">
-                                    {{ numberWithCommas(HobabTalaZarSeke) }}%</b
+                                  <p style="color: green">
+                                    {{ numberWithCommas(HobabTalaZarSeke) }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaZarSeke)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaZarSeke) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaZarSeke) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2451,7 +2450,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2470,7 +2469,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2481,21 +2480,21 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaZarNav > 0">
-                                  <b style="color: green">
-                                    {{ numberWithCommas(HobabTalaZarNav) }}%</b
+                                  <p style="color: green">
+                                    {{ numberWithCommas(HobabTalaZarNav) }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaZarNav)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaZarNav) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaZarNav) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2507,7 +2506,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2526,7 +2525,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2537,25 +2536,25 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaZarPricePrevious > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaZarPricePrevious)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaZarPricePrevious)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
+                                <p style="color: rgb(99, 51, 51)">
                                   {{
                                     numberWithCommas(talaZarPricePrevious)
-                                  }}</b
+                                  }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2573,7 +2572,7 @@
                                   <!-- <v-icon
                                     title="نمودار"
                                     class="ml-2"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2592,7 +2591,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="ml-1"
-                                    style="font-size: 18px; color: #f5d438"
+                                    style="font-size: 18px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2633,7 +2632,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2651,7 +2650,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2662,23 +2661,23 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaGoharSeke > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(HobabTalaGoharSeke)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaGoharSeke)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaGoharSeke) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaGoharSeke) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2690,7 +2689,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2709,7 +2708,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2720,23 +2719,23 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaGoharNav > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(HobabTalaGoharNav)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaGoharNav)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaGoharNav) }}</b
+                                <p style="color: rgb(99, 51, 51)">
+                                  {{ numberWithCommas(HobabTalaGoharNav) }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -2748,7 +2747,7 @@
                                 <div class="hob">
                                   <!-- <v-icon
                                     title="نمودار"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >show_chart</v-icon
                                   > -->
@@ -2767,7 +2766,7 @@
                                   <v-icon
                                     title="اطلاعات"
                                     class="mr-1"
-                                    style="font-size: 16px; color: #f5d438"
+                                    style="font-size: 16px; color: #d9b34a"
                                     @click="showChart()"
                                     >info</v-icon
                                   >
@@ -2778,25 +2777,25 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaGoharPricePrevious > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaGoharPricePrevious)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaGoharPricePrevious)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
                               <b-col cols="3">
-                                <b style="color: rgb(99, 51, 51)">
+                                <p style="color: rgb(99, 51, 51)">
                                   {{
                                     numberWithCommas(talaGoharPricePrevious)
-                                  }}</b
+                                  }}</p
                                 >
                               </b-col>
                             </b-row>
@@ -3021,7 +3020,7 @@ export default {
         this.mesghalPrice = response.data.Data.mesghalPrice;
         this.sekePrice = response.data.Data.sekePrice;
         this.sekeGhadimPrice = response.data.Data.sekeGhadimPrice;
-        this.HobabAbshode = response.data.Data.HobabAbshode;
+        this.HobabAbshode= response.data.Data.HobabAbshode;
         this.HobabSeke = response.data.Data.HobabSeke;
         this.HobabSekeGhadim = response.data.Data.HobabSekeGhadim;
         this.HobabNim = response.data.Data.HobabNim;
@@ -3064,7 +3063,7 @@ p {
 }
 
 .card-header {
-  background-color: #0486a2;
+  background-color: #222222;
 }
 
 div.card-header {
@@ -3073,14 +3072,14 @@ div.card-header {
 }
 .hob {
   font-size: 0.8em;
-  color: rgb(99, 51, 51);
+  color: #222222;
 }
 .grid {
   margin-bottom: 1em;
 }
 /* 
 .menueItem :hover {
- color: #f5d438 !important; 
+ color: #d9b34a !important; 
   transition: 0.90s;
 } */
 </style>

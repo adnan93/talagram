@@ -157,6 +157,8 @@ export default {
     setInterval(function () {
       window.location.reload();
     }, 20000);
+
+    
   },
 
   async mounted() {

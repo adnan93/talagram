@@ -2,7 +2,7 @@
   <v-app style="font-family: IRYekan; background-color: #efede9" >
     <b-row v-if="$route.name!='Prices'" dir="rtl">
 
-      <b-navbar toggleable="lg" style="background-color: #0d5671">
+      <b-navbar toggleable="lg" style="background-color: #222222">
         <div>
           <!-- Just an image -->
           <b-navbar variant="faded" type="light">
@@ -50,9 +50,9 @@
               <h6  class="menueItem"><b  style="color: #efede9"> نمودار </b></h6>
             </b-nav-item>
 
-            <b-nav-item class="ml-2" href="/Connect">
+            <!-- <b-nav-item class="ml-2" href="/Connect">
               <h6  class="menueItem"><b   style="color: #efede9"> ارتباط با ما </b></h6>
-            </b-nav-item>
+            </b-nav-item> -->
 
             <b-nav-item class="ml-2" href="/ShowPrice">
               <h6  class="menueItem"><b style="color: #efede9"> سوالات متداول </b></h6>
@@ -169,14 +169,14 @@
           </a>
         </div>
       </b-col>
-      <hr />
+      <!-- <hr />
       <br />
 
       <h6>
         <v-icon style="font-size: 20px"> copyright </v-icon>
 
         کلیه حقوق متعلق به گروه مالی زمرد ‌می ‌باشد.
-      </h6>
+      </h6> -->
       <br />
 
       <br />
@@ -196,7 +196,7 @@ export default {
 <style scoped lang="scss">
 @font-face {
   font-family: "IRYekan";
-  src: local("IRYekan"), url(./font/IRYekan.ttf) format("truetype");
+  src: local("IRYekan"), url(./font/IRANSansWeb_LightJustPersianNum.1bb7aba5.woff) format("truetype");
 }
 .chart {
   position: absolute;
@@ -236,7 +236,7 @@ a {
 }
 
 .footer {
-  background-color: #0d5671;
+  background-color: #222222;
 }
 .place {
   color: #a5b9bd;

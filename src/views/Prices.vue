@@ -3,12 +3,11 @@
     <b-row dir="rtl">
       <b-col cols="2"> </b-col>
       <b-col cols="8">
-
-        <b-row class="mt-2" align="center">
+        <b-row class="" align="center">
           <b-col>
             <div>
               <img
-                src="../assets/meskal.jpg"
+                src="../assets/meskal.png"
                 width="250 em"
                 height="50%"
                 style="border-radius: 18px"
@@ -17,19 +16,17 @@
           </b-col>
         </b-row>
 
-
-        <b-row class="mt-2" align="center">
+        <b-row class="mb-3" align="center">
           <b-col>
-            <div class="">
-              <b style="color: #d9b34a; font-size: 25px"> سکه زمزد </b>
+            <div class="name">
+              <b style="color: #d9b34a; font-size: 25px"> سکه زمرد </b>
               <br />
             </div>
           </b-col>
         </b-row>
-        
 
         <b-row class="mt-2" align="center">
-          <b-col >
+          <b-col>
             <div class="card3">
               <p>
                 {{ today }}
@@ -43,11 +40,15 @@
             <div class="card3">
               <h6>
                 <a style="text-decoration: none" href="tel:07132301858">
-                  <p style="color: #742b6c">071-32301858</p>
+                  <p style="color: #742b6c">
+                    {{ this.en2fa("071-32301858 ") }}
+                  </p>
                 </a>
 
                 <a style="text-decoration: none" href="tel:09171092419">
-                  <p style="color: #742b6c; font-size: 18px">09171092419</p>
+                  <p class="mt-3" style="color: #742b6c">
+                    {{ this.en2fa("09171092419ث") }}
+                  </p>
                 </a>
               </h6>
             </div>
@@ -58,21 +59,23 @@
         <b-row align="center">
           <b-col>
             <div class="card2">
-              <b style="font-size: 15px"> یک مثقال طلای 17 عیار</b>
-              <b> {{ mesghalPrice }} </b>
+              <b-row>
+                <b class="pb-2" style="font-size: 13px">
+                  یک مثقال طلای 17 عیار
+                </b>
+              </b-row>
+              {{ mesghalPrice }}
             </div>
           </b-col>
 
           <b-col>
             <div class="card2">
               <b-row>
-                <b style="font-size: 16px"> یک گرم طلای 18 عیار </b></b-row
+                <b class="pb-1" style="font-size: 14px">
+                  یک گرم طلای 18 عیار</b
+                ></b-row
               >
-              <b-row>
-                <b>
-                  {{ geramTalaPrice }}
-                </b></b-row
-              >
+              {{ geramTalaPrice }}
             </div>
           </b-col>
         </b-row>
@@ -80,13 +83,17 @@
         <b-row align="center">
           <b-col
             ><div class="card1">
-              <b> تمام سکه 86 </b>
+              <b-row>
+                <b> تمام سکه 86 </b>
+              </b-row>
               {{ sekePrice }}
             </div>
           </b-col>
           <b-col>
             <div class="card1">
-              <b style="font-size: 14px"> سکه یک گرمی </b>
+              <b-row>
+                <b style="font-size: 14px"> سکه یک گرمی </b>
+              </b-row>
 
               {{ sekeGeramiPrice }}
             </div>
@@ -96,13 +103,17 @@
         <b-row align="center">
           <b-col
             ><div class="card1">
-              <b> نیم سکه 68 </b>
+              <b-row>
+                <b> نیم سکه 68 </b>
+              </b-row>
               {{ nimPrice }}
             </div>
           </b-col>
           <b-col
             ><div class="card1">
-              <b style="font-size: 14px"> انس جهانی طلا </b>
+              <b-row>
+                <b style="font-size: 14px"> انس جهانی طلا </b>
+              </b-row>
 
               {{ ons }}
             </div>
@@ -112,7 +123,10 @@
         <b-row align="center">
           <b-col>
             <div class="card1">
-              <b style="font-size: 13px"> ربع سکه 86</b>
+              <b-row>
+                <b style="font-size: 13px"> ربع سکه 86</b>
+              </b-row>
+
               {{ robPrice }}
             </div>
           </b-col>
@@ -120,7 +134,7 @@
           <b-col>
             <div class="card1">
               <b-row>
-                <b> دلار </b>
+                <b style="font-size: 15px"> دلار </b>
               </b-row>
 
               {{ usdPrice }}
@@ -128,25 +142,22 @@
           </b-col>
         </b-row>
 
-        <div class="mt-2">
+        <div class="name mt-4">
           <p
             align="center"
             class="mt-4"
             style="color: #d9b34a; font-size: 15px"
           >
             شیراز، خیابان قصرالدشت، چهارراه ملاصدرا، مرکز خرید طلا و جواهر پارس،
-            طبقه همکف واحد 29
+            طبقه همکف واحد G29
           </p>
         </div>
-
-  
 
         <br />
       </b-col>
 
       <b-col cols="2"> </b-col>
     </b-row>
-
   </div>
 </template>
 
@@ -156,6 +167,24 @@ import config from "@/config";
 export default {
   data() {
     return {
+      arr: [],
+      persian: {
+        0: "۰",
+        1: "۱",
+        2: "۲",
+        3: "۳",
+        4: "۴",
+        5: "۵",
+        6: "۶",
+        7: "۷",
+        8: "۸",
+        9: "۹",
+        "-": "-",
+      },
+
+      mobile: "",
+      phone: "32301858",
+
       list: [],
       timer: "",
 
@@ -182,6 +211,15 @@ export default {
   },
 
   methods: {
+    en2fa(num) {
+      num.split("").map((number, index) => {
+        this.arr[index] = this.persian[number];
+      });
+      return this.arr.join("");
+    },
+
+    // console.log(en2fa("86598231452"));
+
     numberWithCommas(x) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     },
@@ -190,7 +228,7 @@ export default {
   async mounted() {
     //Date
     this.today = new Date().toLocaleDateString("fa-IR");
-    this.time = new Date(new Date().getTime()).toLocaleTimeString("en-GB");
+    this.time = new Date(new Date().getTime()).toLocaleTimeString("fa-GB");
 
     await axios
       .get(`http://localhost:8080/api/v1/CurrentPrice/GetTalagram`, {})
@@ -200,24 +238,30 @@ export default {
 
       //   })
       .then((response) => {
-        this.dollar = response.data.Data.usdPrice;
-        this.ons = response.data.Data.onsPrice.toLocaleString();
-        this.silver = response.data.Data.silverPrice.toLocaleString();
-        this.geramTalaPrice =
-          response.data.Data.geramTalaPrice.toLocaleString();
-        this.gram24TalaPrice =
-          response.data.Data.gram24TalaPrice.toLocaleString();
-        this.nimPrice = this.numberWithCommas(response.data.Data.nimPrice);
-        this.robPrice = this.numberWithCommas(response.data.Data.robPrice);
-        this.sekeGeramiPrice = this.numberWithCommas(
-          response.data.Data.sekeGeramiPrice
+        this.usdPrice = Math.round(response.data.Data.usdPrice).toLocaleString(
+          "fa"
         );
-        this.talaAyarPriceOpen = response.data.Data.talaAyarPriceOpen;
+        this.ons = Math.round(response.data.Data.onsPrice).toLocaleString("fa");
 
-        this.sekePrice = response.data.Data.sekePrice.toLocaleString();
-        this.mesghalRiyal = response.data.Data.mesghalRiyal.toLocaleString();
-        this.usdPrice = response.data.Data.usdPrice.toLocaleString();
-        this.mesghalPrice = response.data.Data.mesghalPrice.toLocaleString();
+        this.silver = response.data.Data.silverPrice.toLocaleString("fa");
+        this.geramTalaPrice = Math.round(
+          response.data.Data.geramTalaPrice
+        ).toLocaleString("fa");
+
+        // response.data.Data.geramTalaPrice.toLocaleString("fa");
+
+        this.gram24TalaPrice =
+          response.data.Data.gram24TalaPrice.toLocaleString("fa");
+        this.nimPrice = response.data.Data.nimPrice.toLocaleString("fa");
+        this.robPrice = response.data.Data.robPrice.toLocaleString("fa");
+        this.sekeGeramiPrice =
+          response.data.Data.sekeGeramiPrice.toLocaleString("fa");
+
+        this.sekePrice = response.data.Data.sekePrice.toLocaleString("fa");
+        this.mesghalRiyal =
+          response.data.Data.mesghalRiyal.toLocaleString("fa");
+        this.mesghalPrice =
+          response.data.Data.mesghalPrice.toLocaleString("fa");
       })
       .catch((e) => {
         this.errors.push(e);
@@ -229,33 +273,38 @@ export default {
 <style>
 .card1 {
   background-color: #e3e3e0;
-  border-radius: 18px;
+  border-radius: 5px;
   color: #742b6c;
   padding: 0.3em;
   box-shadow: 3px 5px 10px black;
-
 }
 
 .card2 {
-  border-radius: 18px;
+  border-radius: 5px;
   color: cornsilk;
   height: 5em;
   background-color: #742b6c;
   box-shadow: 3px 5px 10px black;
-  padding: 0.2em;
-
+  padding: 0.5em;
 }
 
 .card3 {
-  border-radius: 18px;
-  color: rgb(3, 3, 3);
+  border-radius: 5px;
+  color: #742b6c !important;
   height: 4em;
   background-color: #e3e3e0;
   box-shadow: 3px 5px 10px black;
   padding: 0.3em;
-
 }
+
 .backGround {
   background-color: #ffffff;
+}
+
+.name {
+  background-color: #413c3c;
+  border-radius: 5px;
+  /* padding: 0.15%; */
+  padding: 0.3em;
 }
 </style>
