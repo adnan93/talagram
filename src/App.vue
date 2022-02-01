@@ -9,9 +9,9 @@
             <b-navbar-brand class="mr-15" href="/">
               <img
                 class="mt-0 mb-0 pt-0 pb-0"
-                width="55px"
+                width="100%"
                 height="55px"
-                src="@/assets/talagram.png"
+                src="@/assets/meskal.png"
                 alt="طلاگرام"
               />
             </b-navbar-brand>
@@ -126,7 +126,7 @@
           <div>
             <h6 style="color: #a5b9bd">
               شیراز، خیابان قصرالدشت، چهارراه ملاصدرا، مرکز خرید طلا و جواهر
-              پارس، طبقه همکف واحد 29
+              پارس، طبقه همکف واحد 29 G
             </h6>
           </div>
 

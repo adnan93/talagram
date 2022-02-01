@@ -1,145 +1,167 @@
 <template>
   <div class="about">
-   
-         <br>
-        <div style="text-align: center">
-          <b class="mb-0"  style="color: #0D5671; ">محاسبه قيمت حباب</b>
-        </div>
-        <br>
-      <b-row>
-        <b-col cols="2"> </b-col>
+    <b-row class="tit" style="text-align: center; font-size:23px ">
+      <b class="mt-3">محاسبه قيمت حباب</b>
+    </b-row>
+    <br />
+    <b-row>
+      <b-col cols="2"> </b-col>
 
-        <b-col cols="8">
-          <b-row dir="rtl">
-            <b-col class="firstcol" align="right" dir="ltr">
-              <v-select
-                reverse
-                class="select"
-                :items="showList"
-                label="انتخاب اول"
-                :item-text="'Name'"
-                :item-value="'Value'"
-                v-model="firstselection"
-                dense
-                outlined
-              ></v-select>
+      <b-col cols="8">
+        <b-row dir="rtl">
+          <b-col class="firstcol" align="right" dir="ltr">
+            <v-select
+              reverse
+              class="select"
+              :items="showList"
+              label="انتخاب اول"
+              :item-text="'Name'"
+              :item-value="'Value'"
+              v-model="firstselection"
+              dense
+              outlined
+              style="width: 10px"
+              color="#d9b34a"
+            ></v-select>
 
-              <v-text-field
-                reverse
-                class="select"
-                label=" قیمت اول"
-                v-model="firstValue"
-                outlined
-                dense
-              ></v-text-field>
-            </b-col>
+            <v-text-field
+              reverse
+              class="select"
+              label=" قیمت اول"
+              v-model="firstValue"
+              outlined
+              dense
+              color="#d9b34a"
+            ></v-text-field>
+          </b-col>
 
-            <b-col class="secol" align="left" dir="ltr">
-              <v-select
-                reverse
-                class="select"
-                :items="showList"
-                label="انتخاب دوم"
-                :item-text="'Name'"
-                :item-value="'Value'"
-                v-model="secondSelection"
-                dense
-                outlined
-              ></v-select>
-              <v-text-field
-                reverse
-                class="select"
-                label=" قیمت دوم"
-                v-model="secondValue"
-                outlined
-                dense
-              ></v-text-field>
-            </b-col>
-          </b-row>
+          <b-col class="secol" align="left" dir="ltr">
+            <v-select
+              reverse
+              class="select"
+              :items="showList"
+              label="انتخاب دوم"
+              :item-text="'Name'"
+              :item-value="'Value'"
+              v-model="secondSelection"
+              dense
+              outlined
+              color="#d9b34a"
+            ></v-select>
+            <v-text-field
+              reverse
+              class="select"
+              label=" قیمت دوم"
+              v-model="secondValue"
+              outlined
+              dense
+              color="#d9b34a"
+            ></v-text-field>
+          </b-col>
+        </b-row>
 
-          <b-row>
-            <b-col align="center">
-              <v-text-field
-                reverse
-                class="select"
-                label=" قیمت انس"
-                v-model="form.ons"
-                outlined
-                dense
-              ></v-text-field>
-            </b-col>
-          </b-row>
+        <b-row>
+          <b-col align="center">
+            <v-text-field
+              reverse
+              class="select"
+              label=" قیمت انس"
+              v-model="form.ons"
+              outlined
+              dense
+              color="#d9b34a"
+            ></v-text-field>
+          </b-col>
+        </b-row>
 
-          <b-row>
-            <b-col align="center">
-              <v-text-field
-                reverse
-                class="select"
-                label=" قیمت دلار"
-                v-model="dollarPrice"
-                outlined
-                dense
-              >
-              </v-text-field>
-            </b-col>
-          </b-row>
+        <b-row>
+          <b-col align="center">
+            <v-text-field
+              reverse
+              class="select"
+              label=" قیمت دلار"
+              v-model="dollarPrice"
+              outlined
+              dense
+              color="#d9b34a"
+            >
+            </v-text-field>
+          </b-col>
+        </b-row>
 
-          <br />
+        <br />
 
-          <b-row >
-            <b-col align="center">
-              <v-btn
-                :loading="resetLoading"
-                class=" btns1 select2"
-                color="#0486a2"
-                elevation="3"
-                rounded
-                x-large
-                outlined
-                @click="reset()"
-                >تنظیم مجدد</v-btn
-              >
-              <v-btn
-                :loading="hobabLoading"
-                class="btns1 btnsize ml-1"
-                color="#0486a2"
-                elevation="5"
-                rounded
-                dark
-                x-large
-                @click="hobabValue()"
-                >محاسبه حباب</v-btn
-              >
-            </b-col>
-          </b-row>
+        <b-row>
+          <b-col align="center">
+            <!-- <v-btn
+              style="color: yellow"
+              :loading="resetLoading"
+              class="btns1 select2"
+              color="black"
+              elevation="3"
+              rounded
+              x-large
+              outlined
+              @click="reset()"
+              >تنظیم مجدد
+            </v-btn> -->
+            <v-btn
+              style="color: white"
+              :loading="hobabLoading"
+              class="btns1 btnsize ml-1"
+              color="#d9b34a"
+              elevation="5"
+              rounded
+              dark
+              x-large
+              @click="hobabValue()"
+              >محاسبه حباب</v-btn
+            >
+          </b-col>
+        </b-row>
 
-          <br />
-          <br />
-          <hr />
+        <br />
+        <br />
+        <hr />
 
-          <b-row>
-            <b-col cols="1"> </b-col>
-            <b-col cols="5" align="left">
-              {{ Hobab2 }}
-              <b> : حباب دوم </b>
-            </b-col>
+    
 
-            <b-col cols="5" align="right">
-              {{ Hobab1 }}
+        <b-row dir="rtl">
+          <b-col class="ml-2 result" align="center">
+            حباب اول
+            <div  v-if="parseFloat(this.Hobab1) > 0">
+              <p style="color: green">
+                {{ parseFloat(this.Hobab1) }}%
+              </p>
+            </div>
+            <div v-else>
+              <p style="color: red">
+               ({{ parseFloat(this.Hobab1)  }})%
+              </p>
+            </div>
+          </b-col>
 
-              <b> : حباب اول </b>
-            </b-col>
+            <b-col class="mr-2 result" align="center">
+            حباب دوم
+            <div  v-if="parseFloat(this.Hobab2) > 0">
+              <p style="color: green">
+                {{ parseFloat(this.Hobab2) }}%
+              </p>
+            </div>
+            <div v-else>
+              <p style="color: red">
+                ({{ parseFloat(this.Hobab2) }})%
+              </p>
+            </div>
+          </b-col>
+        </b-row>
+      </b-col>
 
-            <b-col cols="1"> </b-col>
-          </b-row>
-        </b-col>
-
-        <b-col cols="2"> </b-col>
-      </b-row>
-                <br />                          <br />
-       <br />
-
-
+      <b-col cols="2"> </b-col>
+    </b-row>
+    <br />
+    <br />
+    <br />
   </div>
 </template>
 
@@ -205,8 +227,8 @@ export default {
       list: [],
       showList: [],
 
-      Hobab1: "",
-      Hobab2: "",
+      Hobab1: 0,
+      Hobab2: 0,
 
       form: {
         ProductNameEnum1: "",
@@ -292,9 +314,9 @@ export default {
       this.hobabLoading = true;
       await axios
 
-      .post(`http://localhost:8080/api/v1/Tools/GetHobab`, this.form)
+        .post(`http://localhost:8080/api/v1/Tools/GetHobab`, this.form)
 
-       // .post(this.url3, this.form)
+        // .post(this.url3, this.form)
         .then((response) => {
           this.Hobab1 = response.data.Data.Hobab1;
           this.Hobab2 = response.data.Data.Hobab2;
@@ -303,6 +325,10 @@ export default {
           this.errors.push(e);
         });
       this.hobabLoading = false;
+
+      console.log( parseFloat(this.Hobab1))
+      console.log(parseFloat(this.Hobab2))
+
     },
 
     async reset() {
@@ -345,8 +371,13 @@ export default {
 
 .select {
   width: 350px !important;
-  border-radius: 20px ;
+  border-radius: 20px;
+  /* direction: rtl !important; */
+  color: #d9b34a !important;
+  padding: 5%;
 }
+
+
 .select2 {
   width: 110px !important;
 }
@@ -354,11 +385,28 @@ export default {
   width: 200px;
 }
 
-.btns1{
+.btns1 {
   margin: 3%;
 }
+.tit {
+  color: #d9b34a !important;
+  border-color: rgb(243, 242, 232);
+  border-style: solid;
+  background-color: rgb(231, 230, 223);
+  box-shadow: 3px 1px 5px 1px rgb(12, 12, 12);
+  height: 50px;
+}
 
+.result {
+  border-radius: 5px;
+  background-color: #e3e3e0;
+  /* box-shadow: 5px 5px 50px 5px  rgb(223, 8, 8); */
+  border-style: double;
 
+  width: 270px !important;
 
-
+  border-color: black;
+  padding: 1%;
+  height: 4em;
+}
 </style>

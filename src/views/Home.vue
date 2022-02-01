@@ -1,14 +1,21 @@
 <template>
   <div class="home">
     <div id="nav">
-      <br />
+      <b-row class="tit" style="text-align: center; font-size:20px">
+      <b class="mt-3"
+        
+        >نرخ های امروز {{ today }}</b
+      >
+    </b-row>
+
+<!-- 
       <div style="text-align: center">
-        <b class="mb-0" style="color: #0d5671">نرخ های امروز {{ today }} </b>
-      </div>
+        <b class="mb-0" style="color: #0d5671"> </b>
+      </div> -->
       <br />
 
       <b-row class="d-flex justify-content-center" dir="rtl">
-        <b-row class="background  mr-2">
+        <b-row class="background mr-2">
           <b-col class="pl-0" cols="6">
             <b style="font-size: 0.8em">
               <img
@@ -150,7 +157,7 @@
                     <b-row align="right">
                       <b-col class="pl-0" cols="6">
                         <div class="menueItem">
-                          <b >
+                          <b>
                             <!-- <v-icon
                             title="نمودار"
                             class="ml-2"
@@ -186,13 +193,13 @@
                       <b-col class="pr-0" cols="3">
                         <div v-if="mesghalPrice > 0">
                           <p style="color: green">
-                            {{ numberWithCommas(mesghalPrice) }}%</p
-                          >
+                            {{ numberWithCommas(mesghalPrice) }}%
+                          </p>
                         </div>
                         <div v-else>
                           <p style="color: red">
-                            ({{ numberWithCommas(mesghalPrice) }}%)</p
-                          >
+                            ({{ numberWithCommas(mesghalPrice) }}%)
+                          </p>
                         </div>
                       </b-col>
                       <b-col cols="3">
@@ -239,19 +246,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabAbshode > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabAbshode) }}%</p
-                            >
+                              {{ numberWithCommas(HobabAbshode) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabAbshode) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabAbshode) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabAbshode) }}</p
-                          >
+                            {{ numberWithCommas(HobabAbshode) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -297,13 +304,13 @@
                       <b-col class="pr-0" cols="3">
                         <div v-if="sekePrice > 0">
                           <p style="color: green">
-                            {{ numberWithCommas(sekePrice) }}%</p
-                          >
+                            {{ numberWithCommas(sekePrice) }}%
+                          </p>
                         </div>
                         <div v-else>
                           <p style="color: red">
-                            ({{ numberWithCommas(sekePrice) }}%)</p
-                          >
+                            ({{ numberWithCommas(sekePrice) }}%)
+                          </p>
                         </div>
                       </b-col>
                       <b-col cols="3">
@@ -353,19 +360,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabSeke > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabSeke) }}%</p
-                            >
+                              {{ numberWithCommas(HobabSeke) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabAbshode) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabAbshode) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabSeke) }}</p
-                          >
+                            {{ numberWithCommas(HobabSeke) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -411,13 +418,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeGhadimPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(sekeGhadimPrice) }}%</p
-                            >
+                              {{ numberWithCommas(sekeGhadimPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(sekeGhadimPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(sekeGhadimPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -466,19 +473,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabSekeGhadim > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabSekeGhadim) }}%</p
-                            >
+                              {{ numberWithCommas(HobabSekeGhadim) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabSekeGhadim) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabSekeGhadim) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabSekeGhadim) }}</p
-                          >
+                            {{ numberWithCommas(HobabSekeGhadim) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -524,13 +531,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="nimPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(nimPrice) }}%</p
-                            >
+                              {{ numberWithCommas(nimPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(nimPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(nimPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -579,19 +586,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabNim > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabNim) }}%</p
-                            >
+                              {{ numberWithCommas(HobabNim) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabNim) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabNim) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabNim) }}</p
-                          >
+                            {{ numberWithCommas(HobabNim) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -637,13 +644,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="robPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(robPrice) }}%</p
-                            >
+                              {{ numberWithCommas(robPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(robPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(robPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -692,19 +699,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabRob > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabRob) }}%</p
-                            >
+                              {{ numberWithCommas(HobabRob) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabRob) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabRob) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabRob) }}</p
-                          >
+                            {{ numberWithCommas(HobabRob) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -750,13 +757,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeGeramiPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(sekeGeramiPrice) }}%</p
-                            >
+                              {{ numberWithCommas(sekeGeramiPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(sekeGeramiPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(sekeGeramiPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -805,19 +812,19 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="HobabGerami > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(HobabGerami) }}%</p
-                            >
+                              {{ numberWithCommas(HobabGerami) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(HobabGerami) }}%)</p
-                            >
+                              ({{ numberWithCommas(HobabGerami) }}%)
+                            </p>
                           </div>
                         </b-col>
                         <b-col cols="3">
                           <p style="color: rgb(99, 51, 51)">
-                            {{ numberWithCommas(HobabGerami) }}</p
-                          >
+                            {{ numberWithCommas(HobabGerami) }}
+                          </p>
                         </b-col>
                       </b-row>
                     </div>
@@ -863,13 +870,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="geramTalaPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(geramTalaPrice) }}%</p
-                            >
+                              {{ numberWithCommas(geramTalaPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(geramTalaPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(geramTalaPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -921,13 +928,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="gram24TalaPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(gram24TalaPrice) }}%</p
-                            >
+                              {{ numberWithCommas(gram24TalaPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(gram24TalaPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(gram24TalaPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -979,13 +986,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="mesghalRiyal > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(mesghalRiyal) }}%</p
-                            >
+                              {{ numberWithCommas(mesghalRiyal) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(mesghalRiyal) }}%)</p
-                            >
+                              ({{ numberWithCommas(mesghalRiyal) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -1037,13 +1044,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="sekeRiyal > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(sekeRiyal) }}%</p
-                            >
+                              {{ numberWithCommas(sekeRiyal) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(sekeRiyal) }}%)</p
-                            >
+                              ({{ numberWithCommas(sekeRiyal) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -1095,13 +1102,13 @@
                         <b-col class="pr-0" cols="3">
                           <div v-if="silverPrice > 0">
                             <p style="color: green">
-                              {{ numberWithCommas(silverPrice) }}%</p
-                            >
+                              {{ numberWithCommas(silverPrice) }}%
+                            </p>
                           </div>
                           <div v-else>
                             <p style="color: red">
-                              ({{ numberWithCommas(silverPrice) }}%)</p
-                            >
+                              ({{ numberWithCommas(silverPrice) }}%)
+                            </p>
                           </div>
                         </b-col>
 
@@ -1168,13 +1175,13 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeRefahPrice > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(sekeRefahPrice) }}%</p
-                                >
+                                  {{ numberWithCommas(sekeRefahPrice) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{ numberWithCommas(sekeRefahPrice) }}%)</p
-                                >
+                                  ({{ numberWithCommas(sekeRefahPrice) }}%)
+                                </p>
                               </div>
                             </b-col>
 
@@ -1222,21 +1229,19 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabRefahCoinFree > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(HobabRefahCoinFree) }}%</p
-                                >
+                                  {{ numberWithCommas(HobabRefahCoinFree) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{
-                                    numberWithCommas(HobabRefahCoinFree)
-                                  }}%)</p
-                                >
+                                  ({{ numberWithCommas(HobabRefahCoinFree) }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabRefahCoinFree) }}</p
-                              >
+                                {{ numberWithCommas(HobabRefahCoinFree) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1280,23 +1285,21 @@
                                 <p style="color: green">
                                   {{
                                     numberWithCommas(HobabRefahCoinSekeRiyal)
-                                  }}%</p
-                                >
+                                  }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabRefahCoinSekeRiyal)
-                                  }}%)</p
-                                >
+                                  }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{
-                                  numberWithCommas(HobabRefahCoinSekeRiyal)
-                                }}</p
-                              >
+                                {{ numberWithCommas(HobabRefahCoinSekeRiyal) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1342,13 +1345,13 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeSaderatPrice > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(sekeSaderatPrice) }}%</p
-                                >
+                                  {{ numberWithCommas(sekeSaderatPrice) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{ numberWithCommas(sekeSaderatPrice) }}%)</p
-                                >
+                                  ({{ numberWithCommas(sekeSaderatPrice) }}%)
+                                </p>
                               </div>
                             </b-col>
 
@@ -1398,23 +1401,21 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabRefahCoinFree > 0">
                                 <p style="color: green">
-                                  {{
-                                    numberWithCommas(HobabSaderatCoinFree)
-                                  }}%</p
-                                >
+                                  {{ numberWithCommas(HobabSaderatCoinFree) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSaderatCoinFree)
-                                  }}%)</p
-                                >
+                                  }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabSaderatCoinFree) }}</p
-                              >
+                                {{ numberWithCommas(HobabSaderatCoinFree) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1457,23 +1458,23 @@
                                 <p style="color: green">
                                   {{
                                     numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                  }}%</p
-                                >
+                                  }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                  }}%)</p
-                                >
+                                  }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
                                 {{
                                   numberWithCommas(HobabSaderatCoinSekeRiyal)
-                                }}</p
-                              >
+                                }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1519,13 +1520,13 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeMellatPrice > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(sekeMellatPrice) }}%</p
-                                >
+                                  {{ numberWithCommas(sekeMellatPrice) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{ numberWithCommas(sekeMellatPrice) }}%)</p
-                                >
+                                  ({{ numberWithCommas(sekeMellatPrice) }}%)
+                                </p>
                               </div>
                             </b-col>
 
@@ -1573,23 +1574,19 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabMellatCoinFree > 0">
                                 <p style="color: green">
-                                  {{
-                                    numberWithCommas(HobabMellatCoinFree)
-                                  }}%</p
-                                >
+                                  {{ numberWithCommas(HobabMellatCoinFree) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{
-                                    numberWithCommas(HobabMellatCoinFree)
-                                  }}%)</p
-                                >
+                                  ({{ numberWithCommas(HobabMellatCoinFree) }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabMellatCoinFree) }}</p
-                              >
+                                {{ numberWithCommas(HobabMellatCoinFree) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1633,23 +1630,21 @@
                                 <p style="color: green">
                                   {{
                                     numberWithCommas(HobabMellatCoinSekeRiyal)
-                                  }}%</p
-                                >
+                                  }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabMellatCoinSekeRiyal)
-                                  }}%)</p
-                                >
+                                  }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{
-                                  numberWithCommas(HobabMellatCoinSekeRiyal)
-                                }}</p
-                              >
+                                {{ numberWithCommas(HobabMellatCoinSekeRiyal) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1694,13 +1689,13 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="sekeSamanPrice > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(sekeSamanPrice) }}%</p
-                                >
+                                  {{ numberWithCommas(sekeSamanPrice) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{ numberWithCommas(sekeSamanPrice) }}%)</p
-                                >
+                                  ({{ numberWithCommas(sekeSamanPrice) }}%)
+                                </p>
                               </div>
                             </b-col>
 
@@ -1747,21 +1742,19 @@
                             <b-col class="pr-0" cols="3">
                               <div v-if="HobabSamanCoinFree > 0">
                                 <p style="color: green">
-                                  {{ numberWithCommas(HobabSamanCoinFree) }}%</p
-                                >
+                                  {{ numberWithCommas(HobabSamanCoinFree) }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
-                                  ({{
-                                    numberWithCommas(HobabSamanCoinFree)
-                                  }}%)</p
-                                >
+                                  ({{ numberWithCommas(HobabSamanCoinFree) }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{ numberWithCommas(HobabSamanCoinFree) }}</p
-                              >
+                                {{ numberWithCommas(HobabSamanCoinFree) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1804,23 +1797,21 @@
                                 <p style="color: green">
                                   {{
                                     numberWithCommas(HobabSamanCoinSekeRiyal)
-                                  }}%</p
-                                >
+                                  }}%
+                                </p>
                               </div>
                               <div v-else>
                                 <p style="color: red">
                                   ({{
                                     numberWithCommas(HobabSamanCoinSekeRiyal)
-                                  }}%)</p
-                                >
+                                  }}%)
+                                </p>
                               </div>
                             </b-col>
                             <b-col cols="3">
                               <p style="color: rgb(99, 51, 51)">
-                                {{
-                                  numberWithCommas(HobabSamanCoinSekeRiyal)
-                                }}</p
-                              >
+                                {{ numberWithCommas(HobabSamanCoinSekeRiyal) }}
+                              </p>
                             </b-col>
                           </b-row>
                         </div>
@@ -1884,17 +1875,17 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaLotusPriceOpen > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaLotusPriceOpen)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaLotusPriceOpen)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
@@ -1945,23 +1936,21 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaLotusSeke > 0">
                                   <p style="color: green">
-                                    {{
-                                      numberWithCommas(HobabTalaLotusSeke)
-                                    }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaLotusSeke) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaLotusSeke)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaLotusSeke) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaLotusSeke) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2003,23 +1992,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaLotusNav > 0">
                                   <p style="color: green">
-                                    {{
-                                      numberWithCommas(HobabTalaLotusNav)
-                                    }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaLotusNav) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaLotusNav)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaLotusNav) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaLotusNav) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaLotusNav) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2063,23 +2048,21 @@
                                   <p style="color: green">
                                     {{
                                       numberWithCommas(talaLotusPricePrevious)
-                                    }}%</p
-                                  >
+                                    }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(talaLotusPricePrevious)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{
-                                    numberWithCommas(talaLotusPricePrevious)
-                                  }}</p
-                                >
+                                  {{ numberWithCommas(talaLotusPricePrevious) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2127,17 +2110,17 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaAyarPriceOpen > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaAyarPriceOpen)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaAyarPriceOpen)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
@@ -2188,23 +2171,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaAyarSeke > 0">
                                   <p style="color: green">
-                                    {{
-                                      numberWithCommas(HobabTalaAyarSeke)
-                                    }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaAyarSeke) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaAyarSeke)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaAyarSeke) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaAyarSeke) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaAyarSeke) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2246,21 +2225,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaAyarNav > 0">
                                   <p style="color: green">
-                                    {{ numberWithCommas(HobabTalaAyarNav) }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaAyarNav) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaAyarNav)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaAyarNav) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaAyarNav) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaAyarNav) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2304,23 +2281,21 @@
                                   <p style="color: green">
                                     {{
                                       numberWithCommas(talaAyarPricePrevious)
-                                    }}%</p
-                                  >
+                                    }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(talaAyarPricePrevious)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{
-                                    numberWithCommas(talaAyarPricePrevious)
-                                  }}</p
-                                >
+                                  {{ numberWithCommas(talaAyarPricePrevious) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2366,15 +2341,15 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaZarPriceOpen > 0">
-                                  <b style="color: green">
-                                    {{ numberWithCommas(talaZarPriceOpen) }}%</b
+                                  <p style="color: green">
+                                    {{ numberWithCommas(talaZarPriceOpen) }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaZarPriceOpen)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
@@ -2425,21 +2400,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaZarSeke > 0">
                                   <p style="color: green">
-                                    {{ numberWithCommas(HobabTalaZarSeke) }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaZarSeke) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaZarSeke)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaZarSeke) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaZarSeke) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaZarSeke) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2481,21 +2454,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaZarNav > 0">
                                   <p style="color: green">
-                                    {{ numberWithCommas(HobabTalaZarNav) }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaZarNav) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaZarNav)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaZarNav) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaZarNav) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaZarNav) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2539,23 +2510,21 @@
                                   <p style="color: green">
                                     {{
                                       numberWithCommas(talaZarPricePrevious)
-                                    }}%</p
-                                  >
+                                    }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(talaZarPricePrevious)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{
-                                    numberWithCommas(talaZarPricePrevious)
-                                  }}</p
-                                >
+                                  {{ numberWithCommas(talaZarPricePrevious) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2602,17 +2571,17 @@
 
                               <b-col class="pr-0" cols="3">
                                 <div v-if="talaGoharPriceOpen > 0">
-                                  <b style="color: green">
+                                  <p style="color: green">
                                     {{
                                       numberWithCommas(talaGoharPriceOpen)
-                                    }}%</b
+                                    }}%</p
                                   >
                                 </div>
                                 <div v-else>
-                                  <b style="color: red">
+                                  <p style="color: red">
                                     ({{
                                       numberWithCommas(talaGoharPriceOpen)
-                                    }}%)</b
+                                    }}%)</p
                                   >
                                 </div>
                               </b-col>
@@ -2662,23 +2631,21 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaGoharSeke > 0">
                                   <p style="color: green">
-                                    {{
-                                      numberWithCommas(HobabTalaGoharSeke)
-                                    }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaGoharSeke) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(HobabTalaGoharSeke)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaGoharSeke) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaGoharSeke) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2720,23 +2687,19 @@
                               <b-col class="pr-0" cols="3">
                                 <div v-if="HobabTalaGoharNav > 0">
                                   <p style="color: green">
-                                    {{
-                                      numberWithCommas(HobabTalaGoharNav)
-                                    }}%</p
-                                  >
+                                    {{ numberWithCommas(HobabTalaGoharNav) }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
-                                    ({{
-                                      numberWithCommas(HobabTalaGoharNav)
-                                    }}%)</p
-                                  >
+                                    ({{ numberWithCommas(HobabTalaGoharNav) }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{ numberWithCommas(HobabTalaGoharNav) }}</p
-                                >
+                                  {{ numberWithCommas(HobabTalaGoharNav) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -2780,23 +2743,21 @@
                                   <p style="color: green">
                                     {{
                                       numberWithCommas(talaGoharPricePrevious)
-                                    }}%</p
-                                  >
+                                    }}%
+                                  </p>
                                 </div>
                                 <div v-else>
                                   <p style="color: red">
                                     ({{
                                       numberWithCommas(talaGoharPricePrevious)
-                                    }}%)</p
-                                  >
+                                    }}%)
+                                  </p>
                                 </div>
                               </b-col>
                               <b-col cols="3">
                                 <p style="color: rgb(99, 51, 51)">
-                                  {{
-                                    numberWithCommas(talaGoharPricePrevious)
-                                  }}</p
-                                >
+                                  {{ numberWithCommas(talaGoharPricePrevious) }}
+                                </p>
                               </b-col>
                             </b-row>
                           </div>
@@ -3020,7 +2981,7 @@ export default {
         this.mesghalPrice = response.data.Data.mesghalPrice;
         this.sekePrice = response.data.Data.sekePrice;
         this.sekeGhadimPrice = response.data.Data.sekeGhadimPrice;
-        this.HobabAbshode= response.data.Data.HobabAbshode;
+        this.HobabAbshode = response.data.Data.HobabAbshode;
         this.HobabSeke = response.data.Data.HobabSeke;
         this.HobabSekeGhadim = response.data.Data.HobabSekeGhadim;
         this.HobabNim = response.data.Data.HobabNim;
@@ -3033,11 +2994,16 @@ export default {
         this.errors.push(e);
       });
   },
+
+  created() {
+    setInterval(function () {
+      window.location.reload();
+    }, 30000);
+  },
 };
 </script>
 
 <style scope>
-
 .test {
   text-align: right !important;
   margin: 0 px;
@@ -3057,9 +3023,9 @@ p {
   width: 15em;
   border-radius: 20px;
   border-style: solid;
-  color: #0486a2;
+    border-color: rgb(255, 255, 255) !important;
 
-  border-color: rgb(253, 250, 250);
+
 }
 
 .card-header {
@@ -3076,6 +3042,18 @@ div.card-header {
 }
 .grid {
   margin-bottom: 1em;
+}
+
+.tit {
+ color: #d9b34a !important;
+  border-color: rgb(243, 242, 232);
+  border-style: solid;
+  background-color: rgb(231, 230, 223);
+  box-shadow: 3px 1px 5px 1px  rgb(12, 12, 12);
+  height: 50px;
+
+
+
 }
 /* 
 .menueItem :hover {

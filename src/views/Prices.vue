@@ -145,7 +145,7 @@
         <div class="name mt-4">
           <p
             align="center"
-            class="mt-4"
+            class="mt-1"
             style="color: #d9b34a; font-size: 15px"
           >
             شیراز، خیابان قصرالدشت، چهارراه ملاصدرا، مرکز خرید طلا و جواهر پارس،
@@ -306,5 +306,6 @@ export default {
   border-radius: 5px;
   /* padding: 0.15%; */
   padding: 0.3em;
+  
 }
 </style>
